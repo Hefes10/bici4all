@@ -1,0 +1,66 @@
+atom-text-editor {
+	text-rendering: optimizeLegibility;
+}
+
+#navBar {
+	height: 50px;
+}
+
+#navBar a {
+	color: white;
+}
+
+#navBar form button.btn-dark {
+	background-color: #0e4714;
+	border-color: white;
+}
+
+#logo {
+	height: 40px;
+}
+
+#comprar {
+	border-right: 1px solid white;
+	margin-right: 20px;
+	padding-right: 20px;
+	/* color: #97c93e !important;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 0px 20px; */
+}
+
+#comprar img {
+	height: 30px;
+}
+
+#main .carousel-inner img {
+	max-height: 80vh;
+	object-fit: scale-down;
+}
+
+#main {
+	background-color: rgba(3, 2, 11, 0.84)
+}
+
+#footer {
+	background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228);
+	/* background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372); */
+	padding: 20px 0px;
+}
+
+#footer a {
+	color: white;
+}
+
+#rowFooter {
+	text-align: center;
+}
+
+/* Terminos y condiciones */
+#terminosycondiciones h1 {
+	text-decoration: bold;
+}
+
+#terminosycondiciones p {
+	text-align: justify;
+}
