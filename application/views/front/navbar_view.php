@@ -5,7 +5,7 @@
       <a class="navbar-brand">
         <span class="navbar-logo">
           <a href="<?php echo base_url('principal');?>">
-            <img id="logo" src="assets/img/logo.png" alt="Bici444all" title="" style="height: 2.8rem;">
+            <img id="logo" src="assets/img/logo.png" alt="Bici4all" title="" style="height: 2.8rem;">
           </a>
         </span>
       </a>
@@ -18,9 +18,6 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Productos<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Login</a>
@@ -45,7 +42,7 @@
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
           <button class="btn btn-dark my-2 my-sm-0" type="submit">
-            <i class="fa fa-search"> Buscar</i>
+            <i class="fa fa-search"></i>
           </button>
         </form>
       </div>

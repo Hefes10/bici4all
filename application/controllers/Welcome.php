@@ -21,11 +21,22 @@ class Welcome extends CI_Controller {
 	 public function index()
  	{
  		// $this->load->view('index.html');
- 		$data = array('titulo' => 'Principal');
+ 		$data = array('titulo' => 'Bici4All');
 
  		$this->load->view('front/head_view',$data);
  		$this->load->view('front/navbar_view');
  		$this->load->view('principal');
+ 		$this->load->view('front/footer_view');
+
+ 	}
+	 public function terminosycondiciones()
+ 	{
+ 		// $this->load->view('index.html');
+ 		$data = array('titulo' => 'Terminos y Condiciones');
+
+ 		$this->load->view('front/head_view',$data);
+ 		$this->load->view('front/navbar_view');
+ 		$this->load->view('terminosycondiciones');
  		$this->load->view('front/footer_view');
 
  	}

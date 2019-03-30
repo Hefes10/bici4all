@@ -3,20 +3,17 @@
   <div class="container">
     <div id="rowFooter" class="row">
       <div class="col-12 col-md">
-        <a href="#">Preguntas frecuentes</a>
+        <a href="#">¿Quiénes Somos?</a>
       </div>
       <div class="col-12 col-md">
-        <a href="#">Contáctanos</a>
+        <a href="#">Comercialización</a>
       </div>
       <div class="col-12 col-md">
-        <a href="#">Prensa</a>
-      </div>
-      <div class="col-12 col-md">
-        <a href="#">Políticas de privacidad</a>
+        <a href="#">Información de Contacto</a>
       </div>
       <div class="col-12 col-md">
           <?php // TODO: arreglar el enlace ?>
-        <a href="application/views/terminosycondiciones.html">Términos y condiciones</a>
+        <a href="<?php echo base_url('terminosycondiciones');?>">Términos y condiciones</a>
       </div>
     </div>
   </div>
