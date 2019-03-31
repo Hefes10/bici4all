@@ -17,5 +17,3 @@
 
 		<title><?php echo ($titulo); ?></title>
 </head>
-
-<!-- asd -->
