@@ -1,11 +1,11 @@
 <!-- Header -->
 <header>
-  <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light" style="background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228)">
+  <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand">
         <span class="navbar-logo">
           <a href="<?php echo base_url('principal');?>">
-            <img id="logo" src="assets/img/logo.png" alt="Bici4all" title="" style="height: 2.8rem;">
+            <img id="logo" src="assets/img/logo.png" alt="Bici4all">
           </a>
         </span>
       </a>

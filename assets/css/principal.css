@@ -2,6 +2,10 @@ atom-text-editor {
 	text-rendering: optimizeLegibility;
 }
 
+#navBar {
+	background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228);
+}
+
 #navBar a {
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -13,7 +17,7 @@ atom-text-editor {
 }
 
 #logo {
-	height: 5rem;
+	height: 4rem;
 }
 
 #main .carousel-inner img {
