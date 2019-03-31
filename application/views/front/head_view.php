@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<metahttp-equiv="X-UA-Compatible"content="IE=edge">
 		<link rel="stylesheet" type="text/css" href="assets/css/principal.css">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
 		<link href="assets/css/bootstrap.css" rel="stylesheet">

@@ -1,6 +1,7 @@
 <body>
 <!-- Main -->
 <main id="main">
+<!-- carousel -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -27,6 +28,13 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
+	<!-- /carousel -->
+
+<!-- Cards -->
+	<div class="container">
+
+	</div>
+<!-- /Cards -->
 
 </main>
 <!-- /main -->

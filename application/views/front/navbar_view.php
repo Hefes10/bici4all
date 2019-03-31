@@ -20,11 +20,13 @@
             <a class="nav-link" href="#">Productos<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="#">
+              <i class="fa fa-user"></i> Login
+            </a>
           </li>
           <li class="nav-item">
-            <a id="comprar" class="nav-link" href="#">
-              <i class="fa fa-shopping-cart"></i>
+            <a class="nav-link" href="#">
+              <i class="fa fa-shopping-cart"></i> Mi Carrito
             </a>
           </li>
           <!-- <li class="nav-item dropdown">
