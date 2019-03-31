@@ -16,26 +16,12 @@ atom-text-editor {
 	height: 5rem;
 }
 
-#comprar {
-	border-right: 1px solid white;
-	margin-right: 20px;
-	padding-right: 20px;
-	/* color: #97c93e !important;
-  border: 1px solid white;
-  border-radius: 5px;
-  margin: 0px 20px; */
-}
-
-#comprar img {
-	height: 30px;
-}
-
 #main .carousel-inner img {
 	max-height: 80vh;
 	object-fit: contain;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
 	#main .carousel-inner img {
 		max-height: 80vh;
 		object-fit: cover;
