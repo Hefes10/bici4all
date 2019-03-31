@@ -22,8 +22,8 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <div class="row">
-        <p>Copyright © 2019 Bici4all. Todos los derechos reservados</p>
+      <div class="row ml-4 mr-4">
+        <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
       </div>
     </div>
   </div>
