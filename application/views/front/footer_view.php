@@ -1,19 +1,29 @@
 <!-- Footer -->
-<footer id="footer">
-  <div class="container">
-    <div id="rowFooter" class="row">
-      <div class="col-12 col-md">
-        <a href="#">¿Quiénes Somos?</a>
+<footer>
+  <div class="footer-nav">
+    <div class="container">
+      <div id="rowFooter" class="row">
+        <div class="col-12 col-md">
+          <a href="#">¿Quiénes Somos?</a>
+        </div>
+        <div class="col-12 col-md">
+          <a href="#">Comercialización</a>
+        </div>
+        <div class="col-12 col-md">
+          <a href="#">Información de Contacto</a>
+        </div>
+        <div class="col-12 col-md">
+            <?php // TODO: arreglar el enlace ?>
+          <a href="<?php echo base_url('terminosycondiciones');?>">Términos y condiciones</a>
+        </div>
       </div>
-      <div class="col-12 col-md">
-        <a href="#">Comercialización</a>
-      </div>
-      <div class="col-12 col-md">
-        <a href="#">Información de Contacto</a>
-      </div>
-      <div class="col-12 col-md">
-          <?php // TODO: arreglar el enlace ?>
-        <a href="<?php echo base_url('terminosycondiciones');?>">Términos y condiciones</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <p>Copyright © 2019 Bici4all. Todos los derechos reservados</p>
       </div>
     </div>
   </div>

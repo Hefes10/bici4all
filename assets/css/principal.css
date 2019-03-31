@@ -37,10 +37,20 @@ atom-text-editor {
 	background-color: rgba(3, 2, 11, 0.84)
 }
 
-#footer {
+.footer-nav {
 	background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228);
-	/* background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372); */
 	padding: 20px 0px;
+}
+
+.footer-nav a {
+	color: white;
+}
+
+.footer-bottom {
+	background: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 #footer a {
