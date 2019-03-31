@@ -67,8 +67,14 @@ atom-text-editor {
 }
 
 /* Terminos y condiciones */
+#terminosycondiciones {
+	margin: 30px 50px;
+}
+
 #terminosycondiciones h1 {
 	font-weight: bold;
+	margin: 18px;
+	font-size: 28px;
 }
 
 #terminosycondiciones p {
