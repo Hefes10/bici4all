@@ -80,3 +80,12 @@ atom-text-editor {
 #terminosycondiciones p {
 	text-align: justify;
 }
+
+#quienessomos {
+	margin: 30px 50px;
+}
+
+#quienessomos p {
+	text-align: justify;
+	font-size: 15px;
+}
