@@ -2,10 +2,6 @@ atom-text-editor {
 	text-rendering: optimizeLegibility;
 }
 
-#navBar {
-	height: 50px;
-}
-
 #navBar a {
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -17,7 +13,7 @@ atom-text-editor {
 }
 
 #logo {
-	height: 40px;
+	height: 5rem;
 }
 
 #comprar {
@@ -45,6 +41,10 @@ atom-text-editor {
 		object-fit: cover;
 	}
 
+}
+
+#carousel {
+  position: relative;
 }
 
 #main {
