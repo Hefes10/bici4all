@@ -38,31 +38,67 @@
 		<div class="row">
 			<div class="col-md-6 col-lg-4  mb-4">
 				<div class="card">
-				  <img src="..." class="card-img-top" alt="...">
+				  <img src="assets/img/img1.jpg" class="card-img-top" alt="...">
 				  <div class="card-body">
-				    <h5 class="card-title">Card title</h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <h5 class="card-title">EF1 Xiaomi bicicleta</h5>
+				    <p class="card-text">
+							Marca: Xiaomi
+							<br>
+							Potencia: 200 - 250w
+							<br>
+							Velocidad máx.: 30km/h
+							<br>
+							Voltaje: 36V
+							<br>
+							Bateria: 5800 mAh litio 208Wh
+							<br>
+							Peso: 14,5 kg
+						</p>
+				    <a href="#" class="btn btn-primary">Comprar</a>
 			  	</div>
 			</div>
 			</div>
 			<div class="col-md-6 col-lg-4  mb-4">
 				<div class="card">
-				  <img src="..." class="card-img-top" alt="...">
+				  <img src="assets/img/img2.jpg" class="card-img-top" alt="...">
 				  <div class="card-body">
-				    <h5 class="card-title">Card title</h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <h5 class="card-title">B12</h5>
+						<p class="card-text">
+							Marca: Electrica Superior
+							<br>
+							Potencia: 251 - 350w
+							<br>
+							Velocidad máx.: 35-38 km/h
+							<br>
+							Voltaje: 36V
+							<br>
+							Bateria: 36 V 13AH Samsung
+							<br>
+							Peso: 16 kg
+						</p>
+				    <a href="#" class="btn btn-primary">Comprar</a>
 			  	</div>
 			</div>
 			</div>
 			<div class="col-md-6 col-lg-4  mb-4">
 				<div class="card">
-				  <img src="..." class="card-img-top" alt="...">
+				  <img src="assets/img/img3.jpg" class="card-img-top" alt="...">
 				  <div class="card-body">
-				    <h5 class="card-title">Card title</h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <h5 class="card-title">IVELO-132</h5>
+						<p class="card-text">
+							Marca: IVELO
+							<br>
+							Potencia: 200 - 250w
+							<br>
+							Velocidad máx.: 30 km/h
+							<br>
+							Voltaje: 36V
+							<br>
+							Bateria: LG batería 5.3Ah ~ 9.9Ah
+							<br>
+							Peso: 16 kg
+						</p>
+				    <a href="#" class="btn btn-primary">Comprar</a>
 			  	</div>
 			</div>
 			</div>
