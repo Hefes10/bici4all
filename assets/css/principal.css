@@ -53,6 +53,11 @@ atom-text-editor {
 	padding-bottom: 20px;
 }
 
+.footer-bottom i {
+	font-size: 2rem;
+	margin-right: 15px;
+}
+
 #footer a {
 	color: white;
 }

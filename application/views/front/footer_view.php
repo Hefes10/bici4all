@@ -22,8 +22,17 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <div class="row ml-4 mr-4">
-        <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
+      <div class="row">
+        <div class="col mt-auto">
+          <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
+        </div>
+        <div class="col ml-auto">
+          <h4>SÍGUENOS</h4>
+          <p>Queremos saber de ti</p>
+          <a href="" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+          <a href="" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="" title="Tweeter" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        </div>
       </div>
     </div>
   </div>
