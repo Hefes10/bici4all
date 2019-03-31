@@ -27,6 +27,7 @@
           <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
         </div>
         <div class="col ml-auto">
+          <?php // TODO: mover el contenido de siguenos a la derecha ?>
           <h4>SÍGUENOS</h4>
           <p>Queremos saber de ti</p>
           <a href="" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
