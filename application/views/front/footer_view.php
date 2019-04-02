@@ -21,16 +21,46 @@
   </div>
 
   <div class="footer-bottom">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col mt-auto">
-          <?php // TODO: mover el contenido de siguenos a la derecha ?>
-          <h4>SÍGUENOS</h4>
-          <p>Queremos saber de ti</p>
-          <a href="" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
-          <a href="" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="" title="Tweeter" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        <div class="col text-align-center">
+            <h4>SIGUENOS</h4>
+            <p>Queremos saber de ti</p>
+            <br>
         </div>
+      </div>
+      <div class="row">
+        <ul>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-twitter"></i></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-instagram"></i></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
         <div class="col mt-auto">
           <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
         </div>
@@ -48,5 +78,4 @@
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
-
 </html>
