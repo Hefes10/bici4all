@@ -42,11 +42,13 @@ atom-text-editor {
 
 #main {
 	background-color: rgba(3, 2, 11, 0.84);
+	/* background-color: #4CA3FF; */
 }
 
 .footer-nav {
 	/* background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228); */
-	background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);
+	background: linear-gradient(90deg, #003D7F 0, #4CA3FF 75%, #007bff);
+	/* background-color: #51487D; */
 	padding: 20px 0px;
 }
 
