@@ -12,9 +12,16 @@ atom-text-editor {
 	border-color: white;
 }
 
+#navBar form button.btn-dark:hover {
+	/* hover es cuando pasas el mouse por encima de algo */
+	background-color: #6e932c;
+	color: white;
+}
+
 #logo {
 	height: 5rem;
 }
+
 
 #main .carousel-inner img {
 	max-height: 80vh;
