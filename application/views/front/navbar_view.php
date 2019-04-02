@@ -1,6 +1,6 @@
 <!-- Header -->
 <header>
-  <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light" style="background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228)">
+  <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light" style="background:  linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);">
     <div class="container">
       <a class="navbar-brand">
         <span class="navbar-logo">
