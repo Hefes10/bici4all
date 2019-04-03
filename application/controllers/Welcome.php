@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
 		parent::_construct();
 	}
 
-	 public function index()
+	public function index()
  	{
  		$data = array('titulo' => 'Bici4All');
 
@@ -17,7 +17,8 @@ class Welcome extends CI_Controller {
  		$this->load->view('front/footer_view');
 
  	}
-	 public function terminosycondiciones()
+
+	public function terminosycondiciones()
  	{
  		// $this->load->view('index.html');
  		$data = array('titulo' => 'Terminos y Condiciones');
@@ -28,4 +29,16 @@ class Welcome extends CI_Controller {
  		$this->load->view('front/footer_view');
 
  	}
+
+	public function quienessomos()
+  {
+	 // $this->load->view('index.html');
+	 $data = array('titulo' => '¿Quiénes somos?');
+
+	 $this->load->view('front/head_view',$data);
+	 $this->load->view('front/navbar_view');
+	 $this->load->view('quienessomos');
+	 $this->load->view('front/footer_view');
+
+ }
 }

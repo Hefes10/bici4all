@@ -53,6 +53,7 @@ $route['default_controller'] = 'Welcome';
 
 $route['principal'] = 'Welcome/index';
 $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
+$route['quienessomos'] = 'Welcome/quienessomos';
 
 
 $route['404_override'] = '';

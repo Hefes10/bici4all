@@ -3,7 +3,7 @@
     <div class="container">
       <div id="quienessomos">
         <h1>¿Quiénes somos?</h1>
-        <p>Somos una empresa argentina fundada hace más de 40 años. Nos especializamos en la comercialización de bicicletas y scooters electricos.
+        <p>Somos una empresa argentina fundada hace más de 5 años. Nos especializamos en la comercialización de bicicletas y scooters electricos.
 
         Diseñamos propuestas que privilegian el bienestar, la simpleza y el disfrute de las pequeñas cosas. Cada uno de nuestros productos está pensado para el transporte y disfrute de nuestros clientes.
 

@@ -4,7 +4,7 @@
     <div class="container">
       <div id="rowFooter" class="row">
         <div class="col-12 col-md">
-          <a href="#">¿Quiénes Somos?</a>
+          <a href="<?php echo base_url('quienessomos');?>">¿Quiénes somos?</a>
         </div>
         <div class="col-12 col-md">
           <a href="#">Comercialización</a>
