@@ -10,7 +10,7 @@
           <a href="#">Comercialización</a>
         </div>
         <div class="col-12 col-md">
-          <a href="#">Información de Contacto</a>
+          <a href="<?php echo base_url('contacto');?>">Contacto</a>
         </div>
         <div class="col-12 col-md">
           <a href="<?php echo base_url('terminosycondiciones');?>">Términos y condiciones</a>
