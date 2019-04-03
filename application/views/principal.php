@@ -52,7 +52,6 @@
 								<br>
 								Peso: 10,5 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -74,7 +73,6 @@
 								<br>
 								Peso: 16 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -96,7 +94,6 @@
 								<br>
 								Peso: 16 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -118,7 +115,6 @@
 								<br>
 								Peso: 17 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -140,7 +136,6 @@
 								<br>
 								Peso: 25,7 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -162,7 +157,6 @@
 								<br>
 								Peso: 16 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -184,7 +178,6 @@
 								<br>
 								Peso: 25,7 kg
 							</p>
-					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
