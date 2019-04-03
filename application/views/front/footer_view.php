@@ -36,7 +36,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <i class="fa fa-facebook-f"></i>
+              <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
@@ -45,7 +45,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <i class="fa fa-twitter"></i></i>
+              <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
@@ -54,7 +54,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <i class="fa fa-instagram"></i></i>
+              <i class="fa fa-instagram"></i>
             </a>
           </li>
         </ul>
