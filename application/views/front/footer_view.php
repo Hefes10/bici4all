@@ -13,7 +13,6 @@
           <a href="#">Información de Contacto</a>
         </div>
         <div class="col-12 col-md">
-            <?php // TODO: arreglar el enlace ?>
           <a href="<?php echo base_url('terminosycondiciones');?>">Términos y condiciones</a>
         </div>
       </div>
