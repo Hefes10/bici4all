@@ -104,8 +104,20 @@
 					<div class="card">
 					  <img src="assets/img/imagen4.png" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h5 class="card-title">X1</h5>
+					    <p class="card-text">
+								Marca: ROBSTEP
+								<br>
+								Potencia: 200 - 250w
+								<br>
+								Velocidad máx.: 20 km/h
+								<br>
+								Voltaje: 36V
+								<br>
+								Bateria: LG batería 4.8Ah
+								<br>
+								Peso: 17 kg
+							</p>
 					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
@@ -114,9 +126,21 @@
 					<div class="card">
 					  <img src="assets/img/imagen5.jpg" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title">BIE0004G</h5>
+					    <p class="card-text">
+								Marca: FITFIU
+								<br>
+								Potencia: 250w
+								<br>
+								Velocidad máx.: 30 km/h
+								<br>
+								Voltaje: 36V
+								<br>
+								Bateria: ION LITIO 9.6Ah
+								<br>
+								Peso: 25,7 kg
+							</p>
+					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
@@ -124,19 +148,43 @@
 					<div class="card">
 					  <img src="assets/img/imagen6.png" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title">Mijia 365</h5>
+					    <p class="card-text">
+								Marca: XIAOMI
+								<br>
+								Potencia: 200 - 250w
+								<br>
+								Velocidad máx.: 30 km/h
+								<br>
+								Voltaje: 36V
+								<br>
+								Bateria: LG batería 5.3Ah ~ 9.9Ah
+								<br>
+								Peso: 16 kg
+							</p>
+					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
 				<div class="col-md-6 col-lg-4  mb-4">
 					<div class="card">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="assets/img/imagen7.jpg" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title">ELITE</h5>
+					    <p class="card-text">
+								Marca: FITFIU
+								<br>
+								Potencia: 250w
+								<br>
+								Velocidad máx.: 30 km/h
+								<br>
+								Voltaje: 36V
+								<br>
+								Bateria: ION LITIO 9.6Ah
+								<br>
+								Peso: 25,7 kg
+							</p>
+					    <a href="#" class="btn btn-primary">Comprar</a>
 				  	</div>
 				</div>
 				</div>
