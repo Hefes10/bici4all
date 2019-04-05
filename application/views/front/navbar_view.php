@@ -1,6 +1,6 @@
 <!-- Header -->
-<header>
-  <nav id="navBar" class="navbar navbar-expand-md navbar-light" style="background: #003D7F;">
+<header id="header">
+  <nav id="navBar" class="navbar navbar-expand-md navbar-light navbar-static-top" style="background: #003D7F;">
     <div class="container">
       <a class="navbar-brand">
         <span class="navbar-logo">
