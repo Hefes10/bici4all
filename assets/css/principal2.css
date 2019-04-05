@@ -1,0 +1,248 @@
+atom-text-editor {
+	text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; }
+}
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
+
+#navBar a {
+	color: white;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navBar form button.btn-dark {
+	background-color: #0e4714;
+	border-color: white;
+}
+
+#navBar form button.btn-dark:hover {
+	/* hover es cuando pasas el mouse por encima de algo */
+	background-color: #6e932c;
+	color: white;
+}
+
+#logo {
+	height: 5rem;
+}
+
+#main .carousel-inner img {
+	max-height: 80vh;
+	object-fit: contain;
+}
+
+@media only screen and (max-width: 800px) {
+	#main .carousel-inner img {
+		max-height: 80vh;
+		object-fit: cover;
+	}
+}
+
+#carousel {
+	position: relative;
+}
+
+#main {
+	background-color: rgba(3, 2, 11, 0.84);
+	/* background-color: #4CA3FF; */
+	/* background-color: white; */
+}
+
+#productos {
+	background-color: #EAEBEF;
+}
+
+#show,#hide {
+	display:none;
+}
+
+div#content {
+	display:none;
+  padding:10px;
+  background-color:#f6f6f6;
+  width:200px;
+  cursor:pointer;
+}
+
+input#show:hover ~ div#content {
+	display: block;
+	z-index: -5px;
+	bottom: 0px;
+	left: 0px;
+	/* position: absolute; */
+}
+
+input#hide:checked ~ div#content {
+	display:none;
+}
+
+.card {
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 20px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Terminos y condiciones */
+#terminosycondiciones {
+	margin: 30px 50px;
+}
+
+#terminosycondiciones h1 {
+	font-weight: bold;
+	margin: 18px;
+	font-size: 28px;
+}
+
+#terminosycondiciones p {
+	text-align: justify;
+}
+
+#quienessomos {
+	margin: 30px 50px;
+}
+
+#quienessomos p {
+	text-align: justify;
+	font-size: 15px;
+}
+
+.footer-nav {
+	/* background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228); */
+	background: linear-gradient(90deg, #003D7F 0, #4CA3FF 75%, #007bff);
+	/* background-color: #51487D; */
+	padding: 20px 0px;
+}
+
+.footer-nav a {
+	color: white;
+}
+
+.footer-bottom {
+	background: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#footer a {
+	color: white;
+}
+
+#rowFooter {
+	text-align: center;
+}
+
+.footer-bottom {
+	text-align: center;
+}
+
+.footer-bottom ul {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.footer-bottom ul li {
+	list-style: none;
+}
+
+.footer-bottom ul li a {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: .5s;
+}
+
+.footer-bottom ul li a span {
+	position: absolute;
+	transition: transform .5s;
+}
+
+.footer-bottom ul li a span:nth-child(1),
+.footer-bottom ul li a span:nth-child(3) {
+	width: 100%;
+	height: 1px;
+	background: #262626;
+}
+
+.footer-bottom ul li a span:nth-child(1) {
+	top: 0;
+	left: 0;
+	transform-origin: right;
+}
+
+.footer-bottom ul li a:hover span:nth-child(1) {
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .5s;
+}
+
+.footer-bottom ul li a span:nth-child(3) {
+	bottom: 0;
+	left: 0;
+	transform-origin: left;
+}
+
+.footer-bottom ul li a:hover span:nth-child(3) {
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s;
+}
+
+.footer-bottom ul li a span:nth-child(2),
+.footer-bottom ul li a span:nth-child(4) {
+	width: 1px;
+	height: 100%;
+	background: #262626;
+}
+
+.footer-bottom ul li a span:nth-child(2) {
+	top: 0;
+	left: 0;
+	transform: scaleY(0);
+	transform-origin: bottom;
+}
+
+.footer-bottom ul li a:hover span:nth-child(2) {
+	transform: scaleY(1);
+	transform-origin: top;
+	transition: transform .5s;
+}
+
+.footer-bottom ul li a span:nth-child(4) {
+	top: 0;
+	right: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+
+.footer-bottom ul li a:hover span:nth-child(4) {
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform .5s;
+}
