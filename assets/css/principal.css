@@ -17,7 +17,6 @@ body {
 }
 
 #navBar form button.btn-dark:hover {
-	/* hover es cuando pasas el mouse por encima de algo */
 	background-color: #6e932c;
 	color: white;
 }
@@ -90,11 +89,17 @@ body {
 	text-align: justify;
 	font-size: 15px;
 }
+/* /Terminos y condiciones */
 
+/* Footer */
+#footer a {
+	color: white;
+}
+/* /Footer */
+
+/* FooterNav */
 .footer-nav {
-	/* background: linear-gradient(90deg, #062609 0, #0e4714 25%, #1ab228); */
 	background: linear-gradient(90deg, #003D7F 0, #4CA3FF 75%, #007bff);
-	/* background-color: #51487D; */
 	padding: 20px 0px;
 }
 
@@ -102,23 +107,18 @@ body {
 	color: white;
 }
 
+#rowFooter {
+	text-align: center;
+}
+/* /FooterNav */
+
+/* FooterBootom */
 .footer-bottom {
+	text-align: center;
 	background: black;
 	color: white;
 	padding-top: 20px;
 	padding-bottom: 20px;
-}
-
-#footer a {
-	color: white;
-}
-
-#rowFooter {
-	text-align: center;
-}
-
-.footer-bottom {
-	text-align: center;
 }
 
 .footer-bottom ul {
@@ -216,3 +216,16 @@ body {
 	transform-origin: bottom;
 	transition: transform .5s;
 }
+/* /FooterBootom */
+
+/* Contacto */
+#contenedorBotella {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#contenedorBotella img {
+	max-height: 70vh;
+	object-fit: cover;
+}
+/* /Contacto */
