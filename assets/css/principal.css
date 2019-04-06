@@ -2,6 +2,10 @@ atom-text-editor {
 	text-rendering: optimizeLegibility;
 }
 
+body {
+	padding-top: 60.8px;
+}
+
 #navBar a {
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
