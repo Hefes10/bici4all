@@ -219,6 +219,10 @@ body {
 /* /FooterBootom */
 
 /* Contacto */
+#mainContacto {
+	background: #EAEBEF;
+}
+
 #contenedorBotella {
 	padding-left: 0;
 	padding-right: 0;

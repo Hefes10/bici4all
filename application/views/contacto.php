@@ -1,5 +1,5 @@
 <body>
-  <main id="main">
+  <main id="mainContacto">
     <div id="contenedorBotella" class="container-fluid">
           <img class="d-block w-100" src="assets/img/contacto.jpg" alt="botella">
         </div>
@@ -50,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
                             </div>
                         </div>
                     </fieldset>
