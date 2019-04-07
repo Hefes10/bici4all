@@ -1,5 +1,5 @@
-<body>
-  <main id="mainContacto">
+<body class="bg">
+  <main>
     <div id="contenedorBotella" class="container-fluid">
           <img class="d-block w-100" src="assets/img/contacto.jpg" alt="botella">
         </div>

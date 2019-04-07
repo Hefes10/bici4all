@@ -6,6 +6,10 @@ body {
 	padding-top: 60.8px;
 }
 
+.bg {
+	background: #EAEBEF;
+}
+
 #navBar a {
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -37,18 +41,10 @@ body {
 	}
 }
 
-#carousel {
-	position: relative;
-}
-
 #main {
 	background-color: rgba(3, 2, 11, 0.84);
 	/* background-color: #4CA3FF; */
 	/* background-color: white; */
-}
-
-#productos {
-	background-color: #EAEBEF;
 }
 
 .card {
@@ -219,10 +215,6 @@ body {
 /* /FooterBootom */
 
 /* Contacto */
-#mainContacto {
-	background: #EAEBEF;
-}
-
 #contenedorBotella {
 	padding-left: 0;
 	padding-right: 0;

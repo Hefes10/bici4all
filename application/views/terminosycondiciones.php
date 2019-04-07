@@ -1,4 +1,4 @@
-<body>
+<body  id="mainContacto" class="bg">
   <main>
     <div class="container">
       <div id="terminosycondiciones">

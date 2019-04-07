@@ -31,7 +31,7 @@
 	<!-- /carousel -->
 
 	<!-- Cards -->
-	<section id="productos" class="mt-4">
+	<section class="mt-4 bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-4  mb-4">
