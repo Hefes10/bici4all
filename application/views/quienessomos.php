@@ -1,4 +1,4 @@
-<body>
+<body class="bg">
   <main>
     <div class="container">
       <div id="quienessomos">
