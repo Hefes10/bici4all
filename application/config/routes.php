@@ -55,7 +55,7 @@ $route['principal'] = 'Welcome/index';
 $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
 $route['quienessomos'] = 'Welcome/quienessomos';
 $route['contacto'] = 'Welcome/contacto';
-
+$route['comercializacion'] = 'Welcome/comercializacion';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

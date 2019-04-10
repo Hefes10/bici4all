@@ -31,25 +31,34 @@ class Welcome extends CI_Controller {
  	}
 
 	public function quienessomos()
-  {
-	 // $this->load->view('index.html');
-	 $data = array('titulo' => '¿Quiénes somos?');
+  	{
+		// $this->load->view('index.html');
+		$data = array('titulo' => '¿Quiénes somos?');
 
-	 $this->load->view('front/head_view',$data);
-	 $this->load->view('front/navbar_view');
-	 $this->load->view('quienessomos');
-	 $this->load->view('front/footer_view');
-
- }
- 	public function contacto()
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('quienessomos');
+		$this->load->view('front/footer_view');
+	}
+	 
+	public function contacto()
 	{
-	// $this->load->view('index.html');
-	$data = array('titulo' => 'Contacto');
+		// $this->load->view('index.html');
+		$data = array('titulo' => 'Contacto');
 
-	$this->load->view('front/head_view',$data);
-	$this->load->view('front/navbar_view');
-	$this->load->view('contacto');
-	$this->load->view('front/footer_view');
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('contacto');
+		$this->load->view('front/footer_view');
+	}
 
- }
+	public function comercializacion()
+	{
+		$data = array('titulo' => 'Comercializacion');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('comercializacion');
+		$this->load->view('front/footer_view');
+	}
 }

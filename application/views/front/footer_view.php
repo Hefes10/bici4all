@@ -7,7 +7,7 @@
           <a href="<?php echo base_url('quienessomos');?>">¿Quiénes somos?</a>
         </div>
         <div class="col-12 col-md">
-          <a href="#">Comercialización</a>
+          <a href="<?php echo base_url('comercializacion');?>">Comercialización</a>
         </div>
         <div class="col-12 col-md">
           <a href="<?php echo base_url('contacto');?>">Contacto</a>
