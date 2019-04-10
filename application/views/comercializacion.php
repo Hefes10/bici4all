@@ -32,7 +32,6 @@
                                 <p>Si tenés alguna duda o consulta podés contactarnos de lunes a viernes de 9:00 a 18:00 llamando a nuestro centro de atención al cliente: 0800-362-2740 o al mail info@bc4all.com.ar</p>
                             </li>
                         </ol>
-                    </div>
                     
                     <h3>ENVIO SIN CARGO A TODO EL PAIS*</h3>
                     <ol>
