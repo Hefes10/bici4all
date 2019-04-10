@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <div id="terminosycondiciones">
-        <h2>Términos y Condiciones BICI4ALL TIENDA ONLINE</h2>
+        <h2>Términos y Condiciones BC4ALL TIENDA ONLINE</h2>
           <p>Términos y condiciones aplicables al uso del sitio web. Gracias por visitar la página de términos y condiciones (los “Términos y Condiciones”) de Verssion S.A. (“Bici4all Tienda Online”). El acceso a y uso de cualquiera de nuestros
             sitios web, www.Bici4all.com.ar, y/o a todos los sitios web adicionales de Bici4all Tienda Online (los “Sitios web de Bici4all Tienda Online”) están sujetos a los siguientes Términos y Condiciones y leyes aplicables. Al acceder y
             navegar en los Sitios web de Bici4all Tienda Online, usted acepta estos Términos y Condiciones sin limitación o condición alguna, incluyendo los términos y condiciones adicionales o modificados que Bici4all Tienda Online publique
