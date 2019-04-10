@@ -225,6 +225,10 @@ body {
 	object-fit: cover;
 }
 
+#contacto h1, h2, h3, h4, h5, h6 {
+	color: #36A0FF;
+}
+
 #formularioContacto {
     color: #36A0FF;
     font-size: 27px;
