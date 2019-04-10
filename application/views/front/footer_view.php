@@ -31,7 +31,7 @@
       <div class="row">
         <ul>
           <li>
-            <a href="#">
+            <a href="http://www.facebook.com" target="_blank">
               <span></span>
               <span></span>
               <span></span>
@@ -40,7 +40,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://www.twitter.com" target="_blank">
               <span></span>
               <span></span>
               <span></span>
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://www.instagram.com" target="_blank">
               <span></span>
               <span></span>
               <span></span>

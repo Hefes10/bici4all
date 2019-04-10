@@ -74,8 +74,8 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col">
-                                        <img class="mr-1 mb-1" src="assets/img/mediosdepago.png" alt="tarjetas 1">
-                                        <img class="ml-1 mt-1" src="assets/img/mediosdepago2.png" alt="tarjetas 2">
+                                        <img class="m-1" src="assets/img/mediosdepago.png" alt="tarjetas 1">
+                                        <img class="m-1" src="assets/img/mediosdepago2.png" alt="tarjetas 2">
                                     </div>
                                 </div>
                             </div>
