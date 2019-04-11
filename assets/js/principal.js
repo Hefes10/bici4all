@@ -1,0 +1,1 @@
+alert("Antes de revisar el proyecto, no olvide conectarse a internet para una mejor visualización de los contenidos visuales. ;)");
