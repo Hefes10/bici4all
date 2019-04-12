@@ -52,8 +52,8 @@
 								<br>
 								Peso: 10,5 kg
 							</p>
-				  	</div>
-				</div>
+				  		</div>
+					</div>
 				</div>
 				<div class="col-md-6 col-lg-4  mb-4">
 					<div class="card">
