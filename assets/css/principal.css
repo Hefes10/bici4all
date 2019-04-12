@@ -25,6 +25,14 @@ body {
 	color: white;
 }
 
+#dropdown-menu {
+	background: rgba(0,61,155,.85);
+}
+
+#dropdown-menu a:hover {
+	background-color: #262626;
+}
+
 #logo {
 	height: 5rem;
 }
