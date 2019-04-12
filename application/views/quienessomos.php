@@ -7,7 +7,7 @@
 
         Diseñamos propuestas que privilegian el bienestar, la simpleza y el disfrute de las pequeñas cosas. Cada uno de nuestros productos está pensado para el transporte y disfrute de nuestros clientes.
 
-        Somos una marca dinámica y en constante evolución, nuestra fuerza radica en la motivación y el compromiso de las personas que trabajamos en Bici4all.
+        Somos una marca dinámica y en constante evolución, nuestra fuerza radica en la motivación y el compromiso de las personas que trabajamos en BC4ALL.
 
         La innovación es uno de nuestros pilares, y nos empuja a buscar nuevas propuestas para asegurarle al público la mejor experiencia, dentro y fuera de nuestras tiendas.
 

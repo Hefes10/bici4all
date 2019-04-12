@@ -61,7 +61,7 @@
       </div>
       <div class="row">
         <div class="col mt-auto">
-          <p>Copyright © 2019 Bici4all. Todos los derechos reservados.</p>
+          <p>Copyright © 2019 BC4ALL. Todos los derechos reservados.</p>
         </div>
       </div>
     </div>

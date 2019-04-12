@@ -1,1 +1,15 @@
-alert("Antes de revisar el proyecto, no olvide conectarse a internet para una mejor visualización de los contenidos visuales. ;)");
+jQuery(document).ready(function(){
+    $(".oculto").hide();              
+      $(".inf").click(function(){
+            var nodo = $(this).attr("href");  
+   
+            if ($(nodo).is(":visible")){
+                 $(nodo).hide();
+                 return false;
+            }else{
+          $(".oculto").hide("slow");                             
+          $(nodo).fadeToggle("fast");
+          return false;
+            }
+      });
+  }); 

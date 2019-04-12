@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
  	{
- 		$data = array('titulo' => 'Bici4All');
+ 		$data = array('titulo' => 'BC4ALL');
 
  		$this->load->view('front/head_view',$data);
  		$this->load->view('front/navbar_view');
