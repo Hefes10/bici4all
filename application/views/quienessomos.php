@@ -1,6 +1,10 @@
 <body class="bg">
   <main>
-    <div class="container">
+    <div class="container-fluid m-0 p-0">
+      <img class="d-block w-100" src="assets/img/quienessomos.jpg" alt="envios" style="max-width: 100%; max-height: 80vh;">
+    </div>  
+  
+  <div class="container">
       <div id="quienessomos">
         <h2>¿Quiénes somos?</h2>
         <p>Somos una empresa argentina fundada hace más de 5 años. Nos especializamos en la comercialización de bicicletas y scooters electricos.
@@ -14,5 +18,53 @@
         Nos consideramos responsables del entorno, por eso llevamos adelante una diversidad de propuestas enfocadas en nuestros colaboradores y en la comunidad en la cual nos desarrollamos.</p>
       </div>
     </div>
+
+    <!-- Nosotros -->
+  <section id="nosotros" class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center text-uppercase">
+          <small>Conoce a nuestro</small>
+          <h2>Equipo</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4  mb-4">
+          <div class="card">
+            <img src="assets/img/about1.jpg" class="card-img-top" alt="Foto de Kim">
+            <div class="card-body">
+              <h5 class="card-title">Shang Kim</h5>
+              <p class="card-text text-justify">
+                Fundador y CEO - BC4ALL
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4  mb-4">
+          <div class="card">
+            <img src="assets/img/about2.jpg" class="card-img-top" alt="Foto de Jong">
+            <div class="card-body">
+              <h5 class="card-title">Lu Jong</h5>
+              <p class="card-text text-justify">
+                Co-Fundador y Presidente - BC4ALL
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card">
+            <img src="assets/img/about3.jpg" class="card-img-top" alt="Foto de Un">
+            <div class="card-body">
+              <h5 class="card-title">Hong Un</h5>
+              <p class="card-text text-justify">
+                Vice-Presidente - BC4ALL
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Nosotros -->
     <!-- /main -->
   </main>

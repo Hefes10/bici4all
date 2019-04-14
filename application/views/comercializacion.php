@@ -1,8 +1,8 @@
 <body class="bg">
 <!-- Main -->
     <main>
-        <div id="imgComercializacion" class="container-fluid">
-            <img class="d-block w-100" src="..." alt="">
+        <div id="imgComercializacion" class="container-fluid m-0 p-0">
+            <img class="d-block w-100" src="assets/img/envios.jpg" alt="envios" style="max-width: 100%; max-height: 80vh;">
         </div>
 
         <div class="container mt-2 mb-2">
@@ -102,8 +102,8 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col">
-                                    <img class="m-1" src="assets/img/mediosdepago.png" alt="tarjetas 1">
-                                    <img class="m-1" src="assets/img/mediosdepago2.png" alt="tarjetas 2">
+                                    <img class="m-1" src="assets/img/mediosdepago.png" alt="tarjetas 1" style="max-width: 100%;">
+                                    <img class="m-1" src="assets/img/mediosdepago2.png" alt="tarjetas 2" style="max-width: 100%;">
                                 </div>
                             </div>
                         </div>

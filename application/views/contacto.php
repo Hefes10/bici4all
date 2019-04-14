@@ -45,15 +45,6 @@
                                             </div>
                                             <div class="form-group">
                                                 <span class="col-md-1 col-md-offset-2 text-center">
-                                                    <i class="fa fa-user bigicon"></i>
-                                                </span>
-                                                <div class="col">
-                                                    <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <span class="col-md-1 col-md-offset-2 text-center">
                                                     <i class="fa fa-envelope-o bigicon"></i>
                                                 </span>
                                                 <div class="col">

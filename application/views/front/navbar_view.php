@@ -27,9 +27,6 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div> -->
           </li>
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#">Productos<span class="sr-only">(current)</span></a>
-          </li> -->
           <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
             <a class="nav-link" href="#">
               <i class="fa fa-user"></i> Login

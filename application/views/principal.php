@@ -11,22 +11,55 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="assets/img/bici1.jpeg" class="d-block w-100" alt="bici1">
+				<div class="overlay carousel-caption">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-md-6 offset-md-6 text-center text-lg-right">
+								<h3>¿POR QUE COMPRAR UNA?</h3>
+								<h4>ES ECONOMICA</h4>
+								<p class="d-none d-sm-block">
+									Ahorra dinero y trámites. No paga patente, seguro, ni combustible!.
+								</p>
+								<img src="assets/img/economico.png" alt="economico" class="d-none d-md-block" style="max-width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="assets/img/bici2.jpg" class="d-block w-100" alt="bici2">
+				<img src="assets/img/bici2.jpg" class="d-block w-100" alt="bici2">					<div class="overlay carousel-caption">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-md-6 offset-md-6 text-center text-lg-right">
+								<h3>¿POR QUE COMPRAR UNA?</h3>
+								<h4>ES ECOLOGICA</h4>
+								<p class="d-none d-sm-block">
+								Sin monóxido de carbono, óxido de nitrógeno ni contaminación acústica. La batería es reciclable.
+								</p>
+								<img src="assets/img/ecologico.png" alt="eclogico" class="d-none d-md-block" style="max-width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="assets/img/bici3.jpg" class="d-block w-100" alt="bici3">
+				<div class="overlay carousel-caption">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-md-6 offset-md-6 text-center text-lg-right">
+								<h3>¿POR QUE COMPRAR UNA?</h3>
+								<h4>ES AGIL</h4>
+								<p class="d-none d-sm-block">
+								Como cualquier bicicleta, podés circular por las ciclovías, veredas o subir al tren. Tiene una autonomía según el modelo entre 20 y 40 km. Llegás sin fatiga o sudor. Ideal para lugares con cuestas.
+								</p>
+								<img src="assets/img/agil.png" alt="agil" class="d-none d-md-block" style="max-width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 	<!-- /carousel -->
 
