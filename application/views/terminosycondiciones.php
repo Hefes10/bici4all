@@ -1,7 +1,7 @@
 <body class="bg">
   <main>
     <div class="container-fluid m-0 p-0">
-      <img class="d-block w-100" src="assets/img/terminos-y-condiciones.jpg" alt="envios" style="max-width: 100%; max-height: 90vh;">
+      <img class="d-block w-100" src="assets/img/terminos-y-condiciones.jpg" alt="envios" style="max-width: 100%; max-height: 78vh;">
     </div>
     <div class="container">
       <div id="terminosycondiciones">

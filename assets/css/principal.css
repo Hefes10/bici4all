@@ -40,6 +40,7 @@ body {
 #main .carousel-inner img {
 	max-height: 90vh;
 	object-fit: cover;
+	-webkit-filter: grayscale(70%);
 	filter: grayscale(70%);
   }
   
@@ -122,6 +123,10 @@ body {
 
 .footer-nav a {
 	color: white;
+}
+
+.footer-nav a:hover {
+	color: black;
 }
 
 #rowFooter {
@@ -242,7 +247,7 @@ body {
 }
 
 #contenedorBotella img {
-	max-height: 70vh;
+	max-height: 80vh;
 	object-fit: cover;
 }
 

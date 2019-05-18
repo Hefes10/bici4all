@@ -56,6 +56,13 @@ $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
 $route['quienessomos'] = 'Welcome/quienessomos';
 $route['contacto'] = 'Welcome/contacto';
 $route['comercializacion'] = 'Welcome/comercializacion';
+$route['registrarse'] = 'Welcome/registrarse';
+$route['verifico_nuevoregistro'] = 'registro_controller';
+$route['login'] = 'Welcome/login';
+$route['verificoUsuario'] = 'loginController';
+$route['cerrar_sesion'] = 'loginController/cerrar_sesion';
+
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

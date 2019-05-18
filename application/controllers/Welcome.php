@@ -15,6 +15,7 @@ class Welcome extends CI_Controller {
  		$this->load->view('front/navbar_view');
  		$this->load->view('principal');
  		$this->load->view('front/footer_view');
+ 		$this->load->view('front/modal');
 
  	}
 
@@ -27,6 +28,7 @@ class Welcome extends CI_Controller {
  		$this->load->view('front/navbar_view');
  		$this->load->view('terminosycondiciones');
  		$this->load->view('front/footer_view');
+ 		$this->load->view('front/modal');
 
  	}
 
@@ -39,6 +41,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/navbar_view');
 		$this->load->view('quienessomos');
 		$this->load->view('front/footer_view');
+		$this->load->view('front/modal');
 	}
 	 
 	public function contacto()
@@ -50,6 +53,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/navbar_view');
 		$this->load->view('contacto');
 		$this->load->view('front/footer_view');
+		$this->load->view('front/modal');
 	}
 
 	public function comercializacion()
@@ -60,5 +64,36 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/navbar_view');
 		$this->load->view('comercializacion');
 		$this->load->view('front/footer_view');
+		$this->load->view('front/modal');
+	}
+	
+	public function registrarse(){
+		$data['titulo']='Registro';
+		
+		$session_data = $this->session->userdata('logged_in');
+		$data['id_perfil'] = $session_data['id_perfil'];
+		$data['nombre'] = $session_data['nombre'];
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('registro');
+		$this->load->view('front/footer_view');
+		$this->load->view('front/modal');
+
+	}
+
+	public function login(){
+		$data['titulo']='login';
+		
+		$session_data = $this->session->userdata('logged_in');
+		$data['id_perfil'] = $session_data['id_perfil'];
+		$data['nombre'] = $session_data['nombre'];
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view',$data);
+		$this->load->view('login');
+		$this->load->view('front/footer_view');
+		$this->load->view('front/modal');
+		
 	}
 }
