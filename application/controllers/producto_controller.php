@@ -399,12 +399,12 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		* Obtiene los datos del producto a eliminar
 		*/
 	    function eliminar_producto(){
-	    	$id = $this->uri->segment(2); 
+	    	$id_producto = $this->uri->segment(2); 
 	    	$data = array(
 	    		'eliminado'=>'SI'
 	    	);
 
-	    	$this->producto_model->estado_producto($id, $data);
+	    	$this->producto_model->estado_producto($id_producto, $data);
 	    	redirect('productos_todos', 'refresh');
 	    }
 
@@ -412,12 +412,12 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		* Obtiene los datos del producto a activar
 		*/
 	    function activar_producto(){
-	    	$id = $this->uri->segment(2);
+	    	$id_producto = $this->uri->segment(2);
 	    	$data = array(
 	    		'eliminado'=>'NO'
 	    	);
 
-	    	$this->producto_model->estado_producto($id, $data);
+	    	$this->producto_model->estado_producto($id_producto, $data);
 	    	redirect('productos_todos', 'refresh');
 	    }
 
@@ -429,17 +429,17 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	if($this->_veri_log()){
 	    	$data = array('titulo' => 'Productos eliminados');
 			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['perfil_id'];
+			$data['id_perfil'] = $session_data['id_perfil'];
 			$data['nombre'] = $session_data['nombre'];
 			
 			$dat = array(
 		        'productos' => $this->producto_model->not_active_productos()
 			);
 
-			$this->load->view('partes/head_view', $data);
-			$this->load->view('partes/menu_view2');
-			$this->load->view('back/productos/muestraeliminados_view', $dat);
-			$this->load->view('partes/footer_view');
+			$this->load->view('admin/front/header', $data);
+			$this->load->view('admin/front/aside');
+			$this->load->view('muestraeliminados_view', $dat);
+			$this->load->view('admin/front/footer');
 			}else{
 			redirect('login', 'refresh');}
 		}

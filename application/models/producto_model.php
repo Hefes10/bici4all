@@ -89,8 +89,8 @@ class Producto_model extends CI_Model{
     /**
     * Eliminación y activación logica de un producto
     */
-    function estado_producto($id, $data){
-        $this->db->where('id', $id);
+    function estado_producto($id_producto, $data){
+        $this->db->where('id_producto', $id_producto);
         $query = $this->db->update('productos', $data);
         if($query) {
             return TRUE;

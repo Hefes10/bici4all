@@ -70,6 +70,9 @@ $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['productos_todos'] = 'producto_controller';
 $route['productos_modifica'] = 'producto_controller/mustra_modificar';
 $route['productos_elimina'] = 'producto_controller/muestra_eliminar';
+$route['muestra_eliminados'] = 'producto_controller/muestra_eliminados';
+$route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
+
 //productos
 
 // login
