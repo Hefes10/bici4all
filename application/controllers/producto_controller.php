@@ -91,16 +91,16 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		function form_agrega_producto()  	//Si se modifica, modificar (agrega_producto) tambien
 		{
 			if($this->_veri_log()){
-			$data = array('titulo' => 'Agregar Producto');
+				$data['titulo']='Agregar Producto';
 		
-			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['perfil_id'];
-			$data['nombre'] = $session_data['nombre'];
-
-			$this->load->view('partes/head_view', $data);
-			$this->load->view('partes/menu_view2');
-			$this->load->view('back/productos/agregaproducto_view');
-			$this->load->view('partes/footer_view');
+				$session_data = $this->session->userdata('logged_in');
+				$data['id_perfil'] = $session_data['id_perfil'];
+				$data['nombre'] = $session_data['nombre'];
+		
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside', $data);
+				$this->load->view('agregaproducto_view');
+				$this->load->view('admin/front/footer');
 			}else{
 			redirect('login', 'refresh'); }
 		}

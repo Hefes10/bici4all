@@ -110,18 +110,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/front/footer');
 	}
 	
-	public function agregar_producto(){
-		$data['titulo']='Agregar Producto';
-		
-		$session_data = $this->session->userdata('logged_in');
-		$data['id_perfil'] = $session_data['id_perfil'];
-		$data['nombre'] = $session_data['nombre'];
-
-		$this->load->view('admin/front/header', $data);
-		$this->load->view('admin/front/aside', $data);
-		$this->load->view('agregaproducto_view');
-		$this->load->view('admin/front/footer');
-	}
-
-	
 }

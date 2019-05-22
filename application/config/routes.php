@@ -65,7 +65,7 @@ $route['verifico_nuevoregistro'] = 'registro_controller';
 //registro
 
 //productos
-$route['agregar_producto'] = 'Welcome/agregar_producto';
+$route['agregar_producto'] = 'producto_controller/form_agrega_producto';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['productos_todos'] = 'producto_controller';
 $route['productos_modifica'] = 'producto_controller/mustra_modificar';
