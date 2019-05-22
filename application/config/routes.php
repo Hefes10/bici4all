@@ -51,18 +51,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Welcome';
 
+// páginas principales
 $route['principal'] = 'Welcome/index';
 $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
 $route['quienessomos'] = 'Welcome/quienessomos';
 $route['contacto'] = 'Welcome/contacto';
 $route['comercializacion'] = 'Welcome/comercializacion';
+// páginas principales
+
+// registro
 $route['registrarse'] = 'Welcome/registrarse';
 $route['verifico_nuevoregistro'] = 'registro_controller';
+//registro
+
+//productos
+$route['agregar_producto'] = 'Welcome/agregar_producto';
+$route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
+$route['productos_todos'] = 'producto_controller';
+$route['productos_modifica'] = 'producto_controller/mustra_modificar';
+$route['productos_elimina'] = 'producto_controller/muestra_eliminar';
+//productos
+
+// login
 $route['login'] = 'Welcome/login';
+$route['admin'] = 'Welcome/admin';
 $route['verificoUsuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
-
-
+// login
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

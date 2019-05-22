@@ -30,11 +30,16 @@ class LoginController extends CI_Controller{
 			$this->load->view('login');
 			$this->load->view('front/footer_view');
 		}
-		else{
-			//Pagina que carga despues de loguearse
+		else if($this->session->userdata('logged_in')['id_perfil'] == '1'){
+			//Pagina que carga despues de loguearse en caso de ser admin
+			redirect(base_url('admin'));
 			//redirect(current_url()); ---> Vuelve a la pagina que estaba antes de loguearse
+			
+		}
+		else{
 			redirect(base_url('principal'));
-        }
+
+		}
 	}
 
 

@@ -21,32 +21,12 @@
       <!--            MENU PARA ADMINISTRADOR-->
       <?php if( ($this->session->userdata('logged_in')) and ($session_data['id_perfil'] == '1')){?>
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url('productosAdmin');?>">
-            Productos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url('usuarios_todos');?>">
-            Usuarios
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Reportes
-          </a>
-          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="<?php echo base_url('ventas');?>">
-              Ventas</a>
-            <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
-              Consultas</a>
-          </div> 
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url('admin');?>">Menú admin</a>
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>
