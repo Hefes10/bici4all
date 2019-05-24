@@ -29,7 +29,7 @@ class Producto_model extends CI_Model{
     */
     function get_electrodomesticos()
     {
-        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'categoria_id' => '1'));
+        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '1'));
         
         if($query->num_rows()>0) {
             return $query;
@@ -43,7 +43,7 @@ class Producto_model extends CI_Model{
     */
     function get_muebles()
     {
-        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'categoria_id' => '2'));
+        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '2'));
         
         if($query->num_rows()>0) {
             return $query;
@@ -64,7 +64,7 @@ class Producto_model extends CI_Model{
     */
     function edit_producto($id){
 
-        $query = $this->db->get_where('productos', array('id' => $id),1);
+        $query = $this->db->get_where('productos', array('id_producto' => $id),1);
                 
         if($query->num_rows() == 1) {
             return $query;

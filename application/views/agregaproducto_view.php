@@ -47,7 +47,7 @@
 															'id' => 'id_categoria', 
 															'class' => 'form-control',
 															'placeholder' => '1- Bicicleta - 2- Scooter', 
-															'value'=>set_value('categoria_id')]); ?>
+															'value'=>set_value('id_categoria')]); ?>
 								</div>
 							</div>
 							<div class="form-group">

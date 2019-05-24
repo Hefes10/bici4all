@@ -240,7 +240,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				foreach ($datos_producto->result() as $row) 
 				{
 					$descripcion = $row->descripcion;
-					$categoria_id = $row->categoria_id;
+					$id_categoria = $row->id_categoria;
 					$imagen = $row->imagen;
 					$precio_costo = $row->precio_costo;
 					$precio_venta = $row->precio_venta;
@@ -249,14 +249,14 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				}
 
 				$dat = array('producto' =>$datos_producto,
-					'id'=>$id,
+					'id_producto'=>$id,
 					'descripcion'=>$descripcion,
-					'categoria_id'=>$categoria_id,
-					'imagen'=>$imagen,
+					'id_categoria'=>$id_categoria,
 					'precio_costo'=>$precio_costo,
 					'precio_venta'=>$precio_venta,
 					'stock'=>$stock,
-					'stock_min'=>$stock_min
+					'stock_min'=>$stock_min,
+					'imagen'=>$imagen
 				);
 			} 
 			else 
@@ -269,10 +269,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$data['perfil_id'] = $session_data['perfil_id'];
 			$data['nombre'] = $session_data['nombre'];
 
-			$this->load->view('partes/head_view', $data);
-			$this->load->view('partes/menu_view2');
-			$this->load->view('back/productos/modificaproducto_view', $dat);
-			$this->load->view('partes/footer_view');
+            $this->load->view('admin/front/header', $data);
+            $this->load->view('admin/front/aside');
+			$this->load->view('modificaproducto_view', $dat);
+            $this->load->view('admin/front/footer');
 			}else{
 			redirect('login', 'refresh');}
 		}
@@ -284,7 +284,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		{
 			//Validación del formulario
 			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
-			$this->form_validation->set_rules('categoria_id', 'Categoria', 'required');
+			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
@@ -305,27 +305,27 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}
 
 			$dat = array(
-				'id'=>$id,
+				'id_producto'=>$id,
 				'descripcion'=>$this->input->post('descripcion',true),
-				'categoria_id'=>$this->input->post('categoria_id',true),
-				'imagen'=>$imagen,
+				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
-				'stock_min'=>$this->input->post('stock_min',true)
+				'stock_min'=>$this->input->post('stock_min',true),
+				'imagen'=>$imagen
 			);
 
 			if ($this->form_validation->run()==FALSE)
 			{
 				$data = array('titulo' => 'Error de formulario');
 				$session_data = $this->session->userdata('logged_in');
-				$data['perfil_id'] = $session_data['perfil_id'];
+				$data['id_perfil'] = $session_data['id_perfil'];
 				$data['nombre'] = $session_data['nombre'];
 
-				$this->load->view('partes/head_view', $data);
-				$this->load->view('partes/menu_view2');
-				$this->load->view('back/productos/modificaproducto_view', $dat);
-				$this->load->view('partes/footer_view');
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside');
+				$this->load->view('modificaproducto_view', $dat);
+				$this->load->view('admin/front/footer');
 			}
 			else
 			{
@@ -352,9 +352,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 	        // Array de datos para obtener datos de libros sin la imagen 
 	    	$dat = array(
-				'id'=>$id,
+				'id_producto'=>$id,
 				'descripcion'=>$this->input->post('descripcion',true),
-				'categoria_id'=>$this->input->post('categoria_id',true),
+				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
@@ -365,7 +365,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	if (!empty($_FILES['filename']['name']))
 	    	{            
 	            // Especifica la configuración para el archivo
-	    		$config['upload_path'] = 'img/productos/';
+	    		$config['upload_path'] = 'assets/img/productos/';
 	    		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 
 	    		$config['max_size'] = '2048';
@@ -381,7 +381,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    			$data = $this->upload->data();
 
 	                    // Path donde guarda el archivo..
-	    			$url ="img/productos/".$_FILES['filename']['name'];
+	    			$url ="assets/img/productos/".$_FILES['filename']['name'];
 
 	                 	// Agrego la imagen si se modifico.  
 	    			$dat['imagen']=$url;
