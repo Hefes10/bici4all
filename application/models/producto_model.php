@@ -62,22 +62,21 @@ class Producto_model extends CI_Model{
     /**
     * Retorna todos los datos de un producto
     */
-    function edit_producto($id){
+    function edit_producto($id_producto){
 
-        $query = $this->db->get_where('productos', array('id_producto' => $id),1);
-                
-        if($query->num_rows() == 1) {
+        $query = $this->db->get_where('productos', array('id_producto' => $id_producto),1);
+        if($query->num_rows()!=0) {
             return $query;
         } else {
             return FALSE;
-        }
+        }    
     }
 
     /**
     * Actualiza los datos de un producto
     */
     function update_producto($id, $data){
-        $this->db->where('id', $id);
+        $this->db->where('id_producto', $id);
         $query = $this->db->update('productos', $data);
         if($query) {
             return TRUE;

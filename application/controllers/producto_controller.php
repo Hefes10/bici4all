@@ -266,7 +266,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			if($this->_veri_log()){
 			$data = array('titulo' => 'Modificar Producto');
 			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['perfil_id'];
+			$data['id_perfil'] = $session_data['id_perfil'];
 			$data['nombre'] = $session_data['nombre'];
 
             $this->load->view('admin/front/header', $data);
@@ -296,8 +296,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->form_validation->set_message('numeric','<div class="alert alert-danger">El campo %s debe contener un valor numérico, al intentar modificar estaba vacio</div>'); 
 
-			$id = $this->uri->segment(2);
-			$datos_producto = $this->producto_model->edit_producto($id);
+			$id_producto = $this->uri->segment(2);
+			$datos_producto = $this->producto_model->edit_producto($id_producto);
 
 			foreach ($datos_producto->result() as $row) 
 			{
@@ -305,7 +305,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}
 
 			$dat = array(
-				'id_producto'=>$id,
+				'id_producto'=>$id_producto,
 				'descripcion'=>$this->input->post('descripcion',true),
 				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
@@ -348,11 +348,11 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	$this->load->library('upload');
 
 			// Obtengo el id del libro
-	    	$id = $this->uri->segment(2);
+	    	$id_producto = $this->uri->segment(2);
 
 	        // Array de datos para obtener datos de libros sin la imagen 
 	    	$dat = array(
-				'id_producto'=>$id,
+				'id_producto'=>$id_producto,
 				'descripcion'=>$this->input->post('descripcion',true),
 				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
@@ -387,7 +387,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    			$dat['imagen']=$url;
 
 						// Actualiza datos del libro
-	    			$this->producto_model->update_producto($id, $dat);
+	    			$this->producto_model->update_producto($id_producto, $dat);
 	    			redirect('productos_todos', 'refresh');
 	    		}
 	    		else
@@ -400,7 +400,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	}
 	    	else
 	    	{
-	    		$this->producto_model->update_producto($id, $dat);
+	    		$this->producto_model->update_producto($id_producto, $dat);
 	    		redirect('productos_todos', 'refresh');
 	    	}
 	    }

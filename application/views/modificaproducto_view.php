@@ -22,7 +22,7 @@
 					<h6> <b>Tamaño maximo de la imagen 2MB</b></h6>		
 				</div>	            
 
-				<?php echo form_open_multipart("verifico_modificaproducto", ['class' => 'form-signin', 'role' => 'form']); ?>
+				<?php echo form_open_multipart("verifico_modificaproducto/$id_producto", ['class' => 'form-signin', 'role' => 'form']); ?>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
