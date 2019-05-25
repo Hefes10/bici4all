@@ -25,8 +25,6 @@
           <ul class="treeview-menu">
             <li class="active"><a href="<?php echo base_url('productos_todos');?>"><i class="fa fa-circle-o"></i> Mostrar productos</a></li>
             <li><a href="<?php echo base_url('agregar_producto');?>"><i class="fa fa-circle-o"></i> Agregar producto</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Modificar producto</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Eliminar producto</a></li>
           </ul>
         </li>
         
@@ -42,8 +40,6 @@
           <ul class="treeview-menu">
             <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Mostrar usuarios</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Agregar usuario</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Modificar usuario</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Eliminar usuario</a></li>
           </ul>
         </li>
         <li class="treeview">

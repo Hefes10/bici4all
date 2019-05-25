@@ -8,12 +8,12 @@
   <!-- Bootstrap 3.3.7 -->
   <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
   <!-- Theme style -->
   <link href="<?php echo base_url('assets/css/AdminLTE.min.css');?>" rel="stylesheet">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="assets/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/skins/_all-skins.min.css');?>">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -42,13 +42,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="assets/img/iconoAdmin2.png" class="user-image" alt="User Image">
+              <img src="<?php echo base_url('assets/img/iconoAdmin2.png');?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><b><?= $data['nombre'] ?></b></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="assets/img/avatar04.png" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url('assets/img/avatar04.png'); ?>" class="img-circle" alt="User Image">
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
