@@ -43,6 +43,7 @@
 							<th>Precio Venta</th>
 							<th>Stock</th>
 							<th>Eliminado</th>
+							<th>Imagen</th>
 							<th>Modificar</th>
 						</tr>
 					</thead>
@@ -55,6 +56,7 @@
 							<td><?php echo $row->precio_venta;  ?></td>
 							<td><?php echo $row->stock;  ?></td>
 							<td><?php echo $row->eliminado;  ?></td>
+							<td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="100" height="100" src="<?php  echo base_url($row->imagen); ?>" ></td>
 							<td><a href="<?php echo base_url("productos_modifica/$row->id_producto");?>">Modificar</a>|<a href="<?php echo base_url("productos_elimina/$row->id_producto");?>">Eliminar</a></td>
 						</tr>
 						<?php } ?>

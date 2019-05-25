@@ -374,15 +374,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 	            // Inicializa la configuración para el archivo 
 				$this->upload->initialize($config);
-				
-				$this->load->library('upload', $config);
-				if ( ! $this->upload->do_upload()) {
-					$error = array('error' => $this->upload->display_errors());
-					print_r($error);
-				} else {
-					$arr_image = array('upload_data' => $this->upload->data());
-					print_r($arr_image);
-				}
 
 	    		if ($this->upload->do_upload('filename'))
 	    		{
