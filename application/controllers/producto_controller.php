@@ -139,10 +139,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				$data['nombre'] = $session_data['nombre'];
 
 
-				$this->load->view('front/head_view', $data);
-				$this->load->view('front/navbar_view');
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside', $data);
 				$this->load->view('agregaproducto_view');
-				$this->load->view('front/footer_view');
+				$this->load->view('admin/front/footer');
 			}
 			else
 			{
