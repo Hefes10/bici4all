@@ -67,6 +67,21 @@
 				redirect('login');
 			}	
 		}
+
+		public function registrarse(){
+			$data['titulo']='Registro';
+			
+			$session_data = $this->session->userdata('logged_in');
+			$data['id_perfil'] = $session_data['id_perfil'];
+			$data['nombre'] = $session_data['nombre'];
+
+			$this->load->view('front/head_view',$data);
+			$this->load->view('front/navbar_view');
+			$this->load->view('registro');
+			$this->load->view('front/footer_view');
+			$this->load->view('front/modal');
+
+		}
 		
 	}
 /* End of file 

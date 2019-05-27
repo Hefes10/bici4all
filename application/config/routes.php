@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Welcome';
 
 // páginas principales
-$route['principal'] = 'Welcome/index';
+$route['principal'] = 'Welcome';
 $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
 $route['quienessomos'] = 'Welcome/quienessomos';
 $route['contacto'] = 'Welcome/contacto';
@@ -60,7 +60,7 @@ $route['comercializacion'] = 'Welcome/comercializacion';
 // páginas principales
 
 // registro
-$route['registrarse'] = 'Welcome/registrarse';
+$route['registrarse'] = 'registro_controller/registrarse';
 $route['verifico_nuevoregistro'] = 'registro_controller';
 //registro
 
