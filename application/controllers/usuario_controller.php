@@ -6,6 +6,16 @@
         $this->load->model('usuario_Model'); //cargamos el modelo  
     }
 
+    private function _veri_log()
+    {
+        if ($this->session->userdata('logged_in')) 
+        {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
     function index($id)
     {
         //obtengo el usuario mediante su id    
@@ -48,6 +58,25 @@
             //Redirecciono a la página de perfil   
             redirect('perfil/' . $usuario);
         }
+
+        function mostrar_usuarios()
+		{
+			if($this->_veri_log()){
+			$data = array('titulo' => 'Usuarios');
+		
+			$session_data = $this->session->userdata('logged_in');
+			$data['id_perfil'] = $session_data['id_perfil'];
+			$data['nombre'] = $session_data['nombre'];
+
+			$dat = array('usuarios' => $this->usuario_model->get_usuarios());
+
+            $this->load->view('admin/front/header', $data);
+            $this->load->view('admin/front/aside', $data);
+			$this->load->view('muestrausuarios_view', $dat);
+            $this->load->view('admin/front/footer');
+			}else{
+			redirect('login', 'refresh'); }
+		}
     }
 }
 

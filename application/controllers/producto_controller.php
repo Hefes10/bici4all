@@ -28,7 +28,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$data = array('titulo' => 'Productos');
 		
 			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['id_perfil'];
+			$data['id_perfil'] = $session_data['id_perfil'];
 			$data['nombre'] = $session_data['nombre'];
 
 			$dat = array('productos' => $this->producto_model->get_productos());

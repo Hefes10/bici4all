@@ -38,8 +38,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Mostrar usuarios</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Agregar usuario</a></li>
+            <li><a href="<?php echo base_url('usuarios_todos');?>"><i class="fa fa-circle-o"></i> Mostrar usuarios</a></li>
+            <li><a href="<?php echo base_url('agregar_usuario');?>"><i class="fa fa-circle-o"></i> Agregar usuario</a></li>
           </ul>
         </li>
         <li class="treeview">
