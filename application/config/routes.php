@@ -68,7 +68,6 @@ $route['verifico_nuevoregistro'] = 'registro_controller';
 $route['productos_todos'] = 'producto_controller';
 $route['agregar_producto'] = 'producto_controller/form_agrega_producto';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
-$route['productos_elimina'] = 'producto_controller/muestra_eliminar';
 $route['muestra_eliminados'] = 'producto_controller/muestra_eliminados';
 $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
@@ -78,12 +77,11 @@ $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_prod
 
 //usuarios
 $route['usuarios_todos'] = 'usuario_controller';
+$route['usuarios_elimina/(:num)'] = 'usuario_controller/eliminar_usuario/$1';
 
 $route['agregar_producto'] = 'producto_controller/form_agrega_producto';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
-$route['productos_elimina'] = 'producto_controller/muestra_eliminar';
 $route['muestra_eliminados'] = 'producto_controller/muestra_eliminados';
-$route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1';
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';

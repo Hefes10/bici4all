@@ -37,7 +37,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
             }else{
             redirect('login', 'refresh'); }
         }
-
+/*
         function obtenerUsuario($id)
         {
             //obtengo el usuario mediante su id    
@@ -81,6 +81,16 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
                 redirect('perfil/' . $usuario);
             }
         }
+*/
+         /**
+		* Obtiene los datos del usuario a eliminar
+		*/
+	    function eliminar_usuario(){
+	    	$id_usuario = $this->uri->segment(2); 
+
+	    	$this->usuario_model->delete_usuario($id_usuario);
+	    	redirect('usuarios_todos', 'refresh');
+	    }
 
     }
 

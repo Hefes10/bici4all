@@ -23,7 +23,6 @@
 			</div>
 			<?php if( ($this->session->userdata('logged_in')) and ($session_data['id_perfil'] == '1')) { ?>
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_usuario'); ?>">Agregar</a>
-				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_usuariosEliminados'); ?>">ELIMINADOS</a>
 				<br> <br>
 			<?php } ?>	
 		</div>
@@ -32,7 +31,6 @@
 
 			<div class="container">
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_usuario'); ?>">Agregar</a>
-				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_usuariosEliminados'); ?>">ELIMINADOS</a>
 				<br> <br>
 				<table class="table table-bordered">
 					<thead>
