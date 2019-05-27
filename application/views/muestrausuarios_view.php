@@ -59,8 +59,7 @@
 							<td><?php echo $row->password;  ?></td>
 							<td><?php echo $row->id_perfil;  ?></td>
 							<td><?php echo $row->baja;  ?></td>
-							<td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="100" height="100" src="<?php  echo base_url($row->imagen); ?>" ></td>
-							<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("productos_elimina/$row->id_producto");?>">Eliminar</a></td>
+							<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_elimina/$row->id_usuario");?>">Eliminar</a></td>
 						</tr>
 						<?php } ?>
 					</tbody>

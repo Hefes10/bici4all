@@ -77,7 +77,7 @@ $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_prod
 //productos
 
 //usuarios
-$route['usuarios_todos'] = 'usuario_controller/mostrar_usuarios';
+$route['usuarios_todos'] = 'usuario_controller';
 
 $route['agregar_producto'] = 'producto_controller/form_agrega_producto';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
