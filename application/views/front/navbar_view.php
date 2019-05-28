@@ -45,7 +45,7 @@
           </div> 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="<?php echo base_url('mi_carrito');?>">
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
         </li>
