@@ -32,8 +32,6 @@ class Carrito_controller extends CI_Controller {
 		{
 			$this->load->view('carritoparte_view' );
 		}
-		
-		$this->load->view('productos_view', $dat);
 		$this->load->view('front/footer_view');
 	}
 

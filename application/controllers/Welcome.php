@@ -2,18 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-	public function _construct()
+	public function __construct()
 	{
-		parent::_construct();
+		parent::__construct();
+		$this->load->model('producto_model');
+        $this->load->library('cart');
 	}
 
 	public function index()
  	{
- 		$data = array('titulo' => 'BC4ALL');
+		 $dat = array('productos' => $this->producto_model->get_productos());
+		 $data = array('titulo' => 'BC4ALL');
 
  		$this->load->view('front/head_view',$data);
  		$this->load->view('front/navbar_view');
- 		$this->load->view('principal');
+ 		$this->load->view('principal', $dat);
  		$this->load->view('front/footer_view');
  		$this->load->view('front/modal');
 
