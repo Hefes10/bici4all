@@ -84,13 +84,13 @@
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<?php echo form_label('Baja:', 'baja'); ?>
-								<?php echo form_input(['name' => 'baja', 
-																'id' => 'baja', 
+								<?php echo form_label('Perfil:', 'id_perfil'); ?>
+								<?php echo form_input(['name' => 'id_perfil', 
+																'id' => 'id_perfil', 
 																'class' => 'form-control',
-																'placeholder' => 'Baja',
-																'value'=>"$baja"]); ?>
-								<?php echo form_error('baja'); ?>
+																'placeholder' => '1- Admin 2- Usuario',
+																'value'=>"$id_perfil"]); ?>
+								<?php echo form_error('id_perfil'); ?>
 							</div>
 						</div>
 					</div>

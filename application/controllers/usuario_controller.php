@@ -119,8 +119,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					'email'=>$email,
 					'usuario'=>$usuario,
 					'password'=>$password,
-					'id_perfil'=>$id_perfil,
-					'baja'=>$baja
+					'id_perfil'=>$id_perfil
 				);
 			} 
 			else 
@@ -152,7 +151,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_rules('email', 'Email', 'required');
 			$this->form_validation->set_rules('usuario', 'Usuario', 'required');
 			$this->form_validation->set_rules('password', 'Password', 'required');
-			$this->form_validation->set_rules('baja', 'Baja', 'required');
+			$this->form_validation->set_rules('id_perfil', 'id_Perfil', 'required');
 			
 
 			//Mensaje del form_validation
@@ -168,7 +167,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'email'=>$this->input->post('email',true),
 				'usuario'=>$this->input->post('usuario',true),
 				'password'=>$this->input->post('password',true),
-				'baja'=>$this->input->post('baja',true)
+				'id_perfil'=>$this->input->post('id_perfil',true)
 			);
 
 			if ($this->form_validation->run()==FALSE)
@@ -206,7 +205,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'email'=>$this->input->post('email',true),
 				'usuario'=>$this->input->post('usuario',true),
 				'password'=>$this->input->post('password',true),
-				'baja'=>$this->input->post('baja',true)
+				'id_perfil'=>$this->input->post('id_perfil',true)
 			);
             
             $this->usuario_model->update_usuario($id_usuario, $dat);
@@ -273,48 +272,24 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}
 			else
 			{
-				$this->_user_upload();			
+                $this->load->library('upload');
+
+                $data = array(
+                    'nombre'=>$this->input->post('nombre',true),
+                    'apellido'=>$this->input->post('apellido',true),
+                    'email'=>$this->input->post('email',true),
+                    'usuario'=>$this->input->post('usuario',true),
+                    'password'=>$this->input->post('password',true),
+                );
+                
+                $usuario = $this->usuario_model->add_user($data);
+                
+                redirect('usuarios_todos', 'refresh');			
 			}
 		}
 		
-		/**
-		* Obtiene los datos del archivo imagen.
-		* Permite archivos gif, jpg, png
-		* Verifica si los datos son correcto en conjunto con la imagen y lo inserta en la tabla correspondiente
-		* En la tabla guarda la URL de donde se encuentra la imagen.
-		*/
-		function _user_upload()
-		{
-            $this->load->library('upload');
-            
-            redirect('verifico_nuevousuario');
-            /*
-	 
-            // Array de datos para insertar en productos
-            $data = array(
-                'nombre'=>$this->input->post('nombre',true),
-                'apellido'=>$this->input->post('apellido',true),
-                'email'=>$this->input->post('email',true),
-                'usuario'=>$this->input->post('usuario',true),
-                'password'=>$this->input->post('password',true),
-                'baja'=>'NO',
-            );
-
-					$usuarios = $this->usuario_model->add_usuario($data);
-
-					redirect('usuarios_todos', 'refresh');
-
-					return TRUE;
-                }
- 
-            }
-            else
-            {
-            	redirect('verifico_nuevousuario');
-		        	
-            }
-            */
-		}
+		
+		
 
     }
 
