@@ -34,6 +34,24 @@ CREATE TABLE IF NOT EXISTS productos(
 	PRIMARY KEY (id_producto)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS ventas_cabecera(
+	id_venta INTEGER(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	fecha date NOT NULL,
+	id_usuario INTEGER(11) NOT NULL,
+	total_venta DOUBLE (10,2) NOT NULL,
+	PRIMARY KEY (id_venta)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS ventas_detalle(
+	id_detalle INTEGER(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	id_venta INTEGER(11) UNSIGNED NOT NULL,
+	id_producto INTEGER(11) UNSIGNED NOT NULL,
+	cantidad INTEGER(11) UNSIGNED NOT NULL,
+	precio DOUBLE (10,2) UNSIGNED NOT NULL,
+	total DOUBLE (10,2) UNSIGNED NOT NULL,
+	PRIMARY KEY (id_detalle)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
 CREATE TABLE IF NOT EXISTS categorias(
 	id_categoria INTEGER (10) NOT NULL,
 	descripcion VARCHAR (50),
@@ -45,3 +63,12 @@ ADD FOREIGN KEY (id_perfil) REFERENCES perfiles(id_perfil);
 
 ALTER TABLE productos
 ADD FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria);
+
+ALTER TABLE ventas_cabecera
+ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario);
+
+ALTER TABLE ventas_detalle
+ADD FOREIGN KEY (id_venta) REFERENCES ventas_cabecera(id_venta);
+
+ALTER TABLE ventas_detalle
+ADD FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
