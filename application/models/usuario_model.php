@@ -34,7 +34,7 @@ class Usuario_model extends CI_Model{
 
 	function edit_usuario($id)
 	{
-		$query = $this->db->get_where('usuarios', array('id' => $id),1);
+		$query = $this->db->get_where('usuarios', array('id_usuario' => $id),1);
                 
         if($query->num_rows() == 1) {
             return $query;
@@ -45,7 +45,7 @@ class Usuario_model extends CI_Model{
 	
 	function update_usuario($id, $data)
 	{
-		$this->db->where('id_usuario', $id_usuario);
+		$this->db->where('id_usuario', $id);
         $query = $this->db->update('usuarios', $data);
         if($query) {
             return TRUE;

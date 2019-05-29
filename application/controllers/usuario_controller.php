@@ -90,6 +90,128 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 	    	$this->usuario_model->delete_usuario($id_usuario);
 	    	redirect('usuarios_todos', 'refresh');
+        }
+        
+        /**
+	    * Muestra para modificar un usuario
+	    */
+		function muestra_modificarUsuario()
+		{
+			$id = $this->uri->segment(2);
+			$datos_usuario = $this->usuario_model->edit_usuario($id);
+
+			if ($datos_usuario != FALSE) {
+				foreach ($datos_usuario->result() as $row) 
+				{
+					$nombre = $row->nombre;
+					$apellido = $row->apellido;
+					$email = $row->email;
+					$usuario = $row->usuario;
+					$password = $row->password;
+					$id_perfil = $row->id_perfil;
+					$baja = $row->baja;	
+				}
+
+				$dat = array('usuario' =>$datos_usuario,
+					'id_usuario'=>$id,
+					'nombre'=>$nombre,
+					'apellido'=>$apellido,
+					'email'=>$email,
+					'usuario'=>$usuario,
+					'password'=>$password,
+					'id_perfil'=>$id_perfil,
+					'baja'=>$baja
+				);
+			} 
+			else 
+			{
+				return FALSE;
+			}
+			if($this->_veri_log()){
+			$data = array('titulo' => 'Modificar Producto');
+			$session_data = $this->session->userdata('logged_in');
+			$data['id_perfil'] = $session_data['id_perfil'];
+			$data['nombre'] = $session_data['nombre'];
+
+            $this->load->view('admin/front/header', $data);
+            $this->load->view('admin/front/aside');
+			$this->load->view('modificausuario_view', $dat);
+            $this->load->view('admin/front/footer');
+			}else{
+			redirect('login', 'refresh');}
+		}
+
+		/**
+	    * Verifica datos para modificar un producto
+	    */
+		function modificar_usuario()
+		{
+			//Validación del formulario
+			$this->form_validation->set_rules('nombre', 'Nombre', 'required');
+			$this->form_validation->set_rules('apellido', 'Apellido', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'required');
+			$this->form_validation->set_rules('usuario', 'Usuario', 'required');
+			$this->form_validation->set_rules('password', 'Password', 'required');
+			$this->form_validation->set_rules('baja', 'Baja', 'required');
+			
+
+			//Mensaje del form_validation
+			$this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio, al intentar modificar estaba vacio</div>');
+
+			$id_usuario = $this->uri->segment(2);
+			$datos_usuario = $this->usuario_model->edit_usuario($id_usuario);
+
+			$dat = array(
+				'id_usuario'=>$id_usuario,
+				'nombre'=>$this->input->post('nombre',true),
+				'apellido'=>$this->input->post('apellido',true),
+				'email'=>$this->input->post('email',true),
+				'usuario'=>$this->input->post('usuario',true),
+				'password'=>$this->input->post('password',true),
+				'baja'=>$this->input->post('baja',true)
+			);
+
+			if ($this->form_validation->run()==FALSE)
+			{
+				$data = array('titulo' => 'Error de formulario');
+				$session_data = $this->session->userdata('logged_in');
+				$data['id_perfil'] = $session_data['id_perfil'];
+				$data['nombre'] = $session_data['nombre'];
+
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside');
+				$this->load->view('modificausuario_view', $dat);
+				$this->load->view('admin/front/footer');
+            }
+            else
+			{
+				$this->_user_modif();		
+			}
+			
+        }
+        
+        function _user_modif()
+	    {
+			//Cargo la libreria para subir archivos
+	    	$this->load->library('upload');
+
+			// Obtengo el id del libro
+	    	$id_usuario = $this->uri->segment(2);
+
+	        // Array de datos para obtener datos de libros sin la imagen 
+	    	$dat = array(
+				'id_usuario'=>$id_usuario,
+				'nombre'=>$this->input->post('nombre',true),
+				'apellido'=>$this->input->post('apellido',true),
+				'email'=>$this->input->post('email',true),
+				'usuario'=>$this->input->post('usuario',true),
+				'password'=>$this->input->post('password',true),
+				'baja'=>$this->input->post('baja',true)
+			);
+            
+            $this->usuario_model->update_usuario($id_usuario, $dat);
+	    	redirect('usuarios_todos', 'refresh');
+	    	
 	    }
 
     }
