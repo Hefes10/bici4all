@@ -212,7 +212,109 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
             $this->usuario_model->update_usuario($id_usuario, $dat);
 	    	redirect('usuarios_todos', 'refresh');
 	    	
-	    }
+        }
+        
+        /**
+	    * Muestra formulario para agregar usuario
+	    */
+		function form_agrega_usuario()  	//Si se modifica, modificar (agrega_usuario) tambien
+		{
+			if($this->_veri_log()){
+				$data['titulo']='Agregar Usuario';
+		
+				$session_data = $this->session->userdata('logged_in');
+				$data['id_perfil'] = $session_data['id_perfil'];
+				$data['nombre'] = $session_data['nombre'];
+		
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside', $data);
+				$this->load->view('agregausuario_view');
+				$this->load->view('admin/front/footer');
+			}else{
+			redirect('login', 'refresh'); }
+		}
+
+		/**
+	    * Verifica datos ingresados en el formulario para agregar usuario
+	    */
+		function agrega_usuario()
+		{
+			//Genero las reglas de validacion
+			$this->form_validation->set_rules('nombre', 'Nombre', 'required');
+			$this->form_validation->set_rules('apellido', 'Apellido', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'required|is_unique[usuarios.email]');
+			$this->form_validation->set_rules('usuario', 'Usuario', 'required|is_unique[usuarios.usuario]');
+			$this->form_validation->set_rules('password', 'Password', 'required');
+
+			//Mensaje de error si no pasan las reglas
+			$this->form_validation->set_message('required',
+										'<div class="alert alert-danger">El campo %s es obligatorio</div>');
+
+			$this->form_validation->set_message('is_unique',
+										'<div class="alert alert-danger">El campo %s ya existe</div>');
+
+			$this->form_validation->set_message('numeric',
+							'<div class="alert alert-danger">El campo %s debe contener un valor numérico</div>');
+
+
+			if (!$this->form_validation->run())
+			{
+				$data = array('titulo' => 'Error de formulario');
+		
+				$session_data = $this->session->userdata('logged_in');
+				$data['id_perfil'] = $session_data['id_perfil'];
+				$data['nombre'] = $session_data['nombre'];
+
+
+				$this->load->view('admin/front/header', $data);
+				$this->load->view('admin/front/aside', $data);
+				$this->load->view('agregausuario_view');
+				$this->load->view('admin/front/footer');
+			}
+			else
+			{
+				$this->_user_upload();			
+			}
+		}
+		
+		/**
+		* Obtiene los datos del archivo imagen.
+		* Permite archivos gif, jpg, png
+		* Verifica si los datos son correcto en conjunto con la imagen y lo inserta en la tabla correspondiente
+		* En la tabla guarda la URL de donde se encuentra la imagen.
+		*/
+		function _user_upload()
+		{
+            $this->load->library('upload');
+            
+            redirect('verifico_nuevousuario');
+            /*
+	 
+            // Array de datos para insertar en productos
+            $data = array(
+                'nombre'=>$this->input->post('nombre',true),
+                'apellido'=>$this->input->post('apellido',true),
+                'email'=>$this->input->post('email',true),
+                'usuario'=>$this->input->post('usuario',true),
+                'password'=>$this->input->post('password',true),
+                'baja'=>'NO',
+            );
+
+					$usuarios = $this->usuario_model->add_usuario($data);
+
+					redirect('usuarios_todos', 'refresh');
+
+					return TRUE;
+                }
+ 
+            }
+            else
+            {
+            	redirect('verifico_nuevousuario');
+		        	
+            }
+            */
+		}
 
     }
 

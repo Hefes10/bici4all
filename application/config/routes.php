@@ -80,9 +80,9 @@ $route['usuarios_todos'] = 'usuario_controller';
 $route['usuarios_elimina/(:num)'] = 'usuario_controller/eliminar_usuario/$1';
 $route['usuarios_modifica/(:num)'] = 'usuario_controller/muestra_modificarusuario/$1';
 $route['verifico_modificausuario/(:num)'] = 'usuario_controller/modificar_usuario/$1';
+$route['agregar_usuario'] = 'usuario_controller/form_agrega_usuario';
+$route['verifico_nuevousuario'] = 'usuario_controller/agrega_usuario';
 
-$route['agregar_producto'] = 'producto_controller/form_agrega_producto';
-$route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['muestra_eliminados'] = 'producto_controller/muestra_eliminados';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 //usuarios
