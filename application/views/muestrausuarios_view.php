@@ -31,6 +31,7 @@
 
 			<div class="container">
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_usuario'); ?>">Agregar</a>
+				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_usuarios_eliminados'); ?>">ELIMINADOS</a>
 				<br> <br>
 				<table class="table table-bordered">
 					<thead>

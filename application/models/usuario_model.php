@@ -14,7 +14,7 @@ class Usuario_model extends CI_Model{
 	function get_usuarios()
 	{
 		//$this->db->select('id, nombre, apellido, username');
-		$query = $this->db->get('usuarios');
+		$query = $this->db->get_where('usuarios', array('baja' => 'NO'));
 
 		if($query->num_rows()>0) {
             return $query;
@@ -54,11 +54,38 @@ class Usuario_model extends CI_Model{
         }
 	}
 
+	/*
 	function delete_usuario($id)
 	{			
 		$this->db->where('id_usuario', $id);
 		$query = $this->db->delete('usuarios'); 
 		return true;	
 	}
+	*/
+	/**
+    * Retorna todos los usuarios inactivos
+    */
+    function not_active_usuarios()
+    {
+        $query = $this->db->get_where('usuarios', array('baja' => 'SI'));
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }        
+	}
+	
+	/**
+    * Eliminación y activación logica de un usuario
+    */
+    function estado_usuario($id_usuario, $data){
+        $this->db->where('id_usuario', $id_usuario);
+        $query = $this->db->update('usuarios', $data);
+        if($query) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 	
 } 

@@ -69,7 +69,7 @@
 
 			<div class="container">
 				<div class="well">
-					<h1>No hay Productos</h1>
+					<h1>No hay Productos disponibles</h1>
 				</div>	
 			</div>
 

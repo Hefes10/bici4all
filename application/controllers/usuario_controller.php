@@ -85,13 +85,14 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
          /**
 		* Obtiene los datos del usuario a eliminar
 		*/
+		/*
 	    function eliminar_usuario(){
 	    	$id_usuario = $this->uri->segment(2); 
 
 	    	$this->usuario_model->delete_usuario($id_usuario);
 	    	redirect('usuarios_todos', 'refresh');
         }
-        
+        */
         /**
 	    * Muestra para modificar un usuario
 	    */
@@ -127,7 +128,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				return FALSE;
 			}
 			if($this->_veri_log()){
-			$data = array('titulo' => 'Modificar Producto');
+			$data = array('titulo' => 'Modificar usuario');
 			$session_data = $this->session->userdata('logged_in');
 			$data['id_perfil'] = $session_data['id_perfil'];
 			$data['nombre'] = $session_data['nombre'];
@@ -141,7 +142,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		}
 
 		/**
-	    * Verifica datos para modificar un producto
+	    * Verifica datos para modificar un usuario
 	    */
 		function modificar_usuario()
 		{
@@ -288,7 +289,54 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}
 		}
 		
-		
+		/**
+		* Obtiene los datos del usuario a eliminar
+		*/
+	    function eliminar_usuario(){
+	    	$id_usuario = $this->uri->segment(2); 
+	    	$data = array(
+	    		'baja'=>'SI'
+	    	);
+
+	    	$this->usuario_model->estado_usuario($id_usuario, $data);
+	    	redirect('usuarios_todos', 'refresh');
+	    }
+
+	    /**
+		* Obtiene los datos del usuario a activar
+		*/
+	    function activar_usuario(){
+	    	$id_usuario = $this->uri->segment(2);
+	    	$data = array(
+	    		'baja'=>'NO'
+	    	);
+
+	    	$this->usuario_model->estado_usuario($id_usuario, $data);
+	    	redirect('usuarios_todos', 'refresh');
+	    }
+
+	    /**
+		* Usuarios eliminados logicamente
+		*/
+	    function muestra_usuarios_eliminados()
+	    {    	
+	    	if($this->_veri_log()){
+	    	$data = array('titulo' => 'Usuarios eliminados');
+			$session_data = $this->session->userdata('logged_in');
+			$data['id_perfil'] = $session_data['id_perfil'];
+			$data['nombre'] = $session_data['nombre'];
+			
+			$dat = array(
+		        'usuarios' => $this->usuario_model->not_active_usuarios()
+			);
+
+			$this->load->view('admin/front/header', $data);
+			$this->load->view('admin/front/aside');
+			$this->load->view('muestra_usuarios_eliminados_view', $dat);
+			$this->load->view('admin/front/footer');
+			}else{
+			redirect('login', 'refresh');}
+		}
 		
 
     }

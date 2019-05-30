@@ -92,9 +92,8 @@ $route['usuarios_modifica/(:num)'] = 'usuario_controller/muestra_modificarusuari
 $route['verifico_modificausuario/(:num)'] = 'usuario_controller/modificar_usuario/$1';
 $route['agregar_usuario'] = 'usuario_controller/form_agrega_usuario';
 $route['verifico_nuevousuario'] = 'usuario_controller/agrega_usuario';
-
-$route['muestra_eliminados'] = 'producto_controller/muestra_eliminados';
-$route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
+$route['muestra_usuarios_eliminados'] = 'usuario_controller/muestra_usuarios_eliminados';
+$route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
 //usuarios
 
 // login
