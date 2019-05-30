@@ -17,3 +17,13 @@ jQuery(document).ready(function(){
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
+
+  function borra_carrito() {
+    var result = confirm('Esta seguro de eliminar todo el carrito?');
+
+    if (result) {
+        window.location = 'carrito_elimina/all';
+    } else {
+        return false; // Boton Cancela
+    }
+};

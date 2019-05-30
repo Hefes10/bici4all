@@ -81,7 +81,7 @@
                     </td> 
                     <td colspan="5" align="right">
                         <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en partes/head_view -->
-                        <input type="button" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
+                        <input type="button" href="<?php echo base_url('assets/js/principal.js');?>" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
                         <!-- Submit boton. Actualiza los datos en el carrito -->
                         <input type="submit" class ='btn btn-primary btn-lg' value="Actualizar">
                         <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
