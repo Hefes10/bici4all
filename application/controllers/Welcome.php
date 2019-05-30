@@ -11,8 +11,32 @@ class Welcome extends CI_Controller {
 
 	public function index()
  	{
-		 $dat = array('productos' => $this->producto_model->get_productos());
-		 $data = array('titulo' => 'BC4ALL');
+
+		$dat = array('productos' => $this->producto_model->get_productos());
+		
+		$data = array('titulo' => 'BC4ALL');
+
+ 		$this->load->view('front/head_view',$data);
+ 		$this->load->view('front/navbar_view');
+ 		$this->load->view('principal', $dat);
+ 		$this->load->view('front/footer_view');
+ 		$this->load->view('front/modal');
+
+ 	}
+	
+	 public function indexASD($id)
+ 	{
+		if ($id == 1){
+			$dat = array('productos' => $this->producto_model->get_bicicletas());
+		}
+		else if ($id == 2){
+			$dat = array('productos' => $this->producto_model->get_scooters());
+		}
+		else{
+			$dat = array('productos' => $this->producto_model->get_productos());
+		}
+		
+		$data = array('titulo' => 'BC4ALL');
 
  		$this->load->view('front/head_view',$data);
  		$this->load->view('front/navbar_view');

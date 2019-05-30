@@ -7,7 +7,7 @@
       <a class="navbar-brand">
         <span class="navbar-logo">
           <a href="<?php echo base_url('principal');?>">
-            <img id="logo" src="assets/img/logo.png" alt="Bici4all" title="" style="height: 2.8rem;">
+            <img id="logo" src="<?php echo base_url('assets/img/logo.png');?>" alt="Bici4all" title="" style="height: 2.8rem;">
           </a>
         </span>
       </a>
@@ -21,6 +21,16 @@
       <!--            MENU PARA ADMINISTRADOR-->
       <?php if( ($this->session->userdata('logged_in')) and ($session_data['id_perfil'] == '1')){?>
         <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Productos
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url('principal/1');?>">Bicicletas</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal/2');?>">Scooters</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal');?>">Ver Todos</a>
+          </div> 
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
@@ -40,8 +50,9 @@
             Productos
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Bicicletas</a>
-            <a class="dropdown-item" href="#">Scooters</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal/1');?>">Bicicletas</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal/2');?>">Scooters</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal');?>">Ver Todos</a>
           </div> 
         </li>
         <li class="nav-item">
@@ -75,8 +86,9 @@
             Productos
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Bicicletas</a>
-            <a class="dropdown-item" href="#">Scooter</a>
+            <a class="dropdown-item" href="<?php echo base_url("principal/1");?>">Bicicletas</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal/2');?>">Scooter</a>
+            <a class="dropdown-item" href="<?php echo base_url('principal');?>">Ver todos</a>
             <!-- <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a> -->
           </div> 

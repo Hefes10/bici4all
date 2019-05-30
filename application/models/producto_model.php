@@ -25,9 +25,9 @@ class Producto_model extends CI_Model{
     }
 
     /**
-    * Retorna todos los electrodomesticos
+    * Retorna todas las bicicletas
     */
-    function get_electrodomesticos()
+    function get_bicicletas()
     {
         $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '1'));
         
@@ -39,9 +39,9 @@ class Producto_model extends CI_Model{
     }
 
     /**
-    * Retorna todos los muebles
+    * Retorna todos los scooters
     */
-    function get_muebles()
+    function get_scooters()
     {
         $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '2'));
         

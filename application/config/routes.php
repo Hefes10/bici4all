@@ -53,6 +53,7 @@ $route['default_controller'] = 'Welcome';
 
 // páginas principales
 $route['principal'] = 'Welcome';
+$route['principal/(:num)'] = 'Welcome/indexASD/$1';
 $route['terminosycondiciones'] = 'Welcome/terminosycondiciones';
 $route['quienessomos'] = 'Welcome/quienessomos';
 $route['contacto'] = 'Welcome/contacto';
