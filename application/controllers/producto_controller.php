@@ -454,11 +454,54 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}else{
 			redirect('login', 'refresh');}
 		}
+
+		public function verDetalle($idx)
+		{
+			$id = $this->uri->segment(2);
+			$datos_producto = $this->producto_model->edit_producto($idx);
+
+			if ($datos_producto != FALSE) {
+				foreach ($datos_producto->result() as $row) 
+				{
+					$descripcion = $row->descripcion;
+					$id_categoria = $row->id_categoria;
+					$precio_costo = $row->precio_costo;
+					$precio_venta = $row->precio_venta;
+					$stock = $row->stock;
+					$stock_min = $row->stock_min;	
+					$imagen = $row->imagen;
+				}
+
+				$dat = array('producto' =>$datos_producto,
+					'id_producto'=>$id,
+					'descripcion'=>$descripcion,
+					'id_categoria'=>$id_categoria,
+					'precio_costo'=>$precio_costo,
+					'precio_venta'=>$precio_venta,
+					'stock'=>$stock,
+					'stock_min'=>$stock_min,
+					'imagen'=>$imagen
+				);
+				$data = array('titulo' => 'BC4ALL');
+	
+				$this->load->view('front/head_view',$data);
+				$this->load->view('front/navbar_view');
+				$this->load->view('detalle_view', $dat);
+				$this->load->view('front/footer_view');
+				$this->load->view('front/modal');
+			} 
+			else 
+			{
+				return FALSE;
+			}
+
+		}
+	}
 	    
 
 		
 		
 		
-	}
+
 /* End of file
 */

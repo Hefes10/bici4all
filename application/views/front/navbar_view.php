@@ -98,11 +98,11 @@
             <i class="fa fa-user"></i> Login
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
           <a class="nav-link" href="#">
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
-        </li>
+        </li> -->
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">

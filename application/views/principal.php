@@ -105,60 +105,8 @@
 									<p><?php echo $row->descripcion; ?> </p>
 
 									<p>
-									<?php
-										if($row->stock <= 0){
-											$btn = array(
-												'class' => 'btn btn-danger',
-												'value' => 'Comprar',
-												'disabled' => '',
-												'name' => 'action'
-												);
-											
-											echo form_submit($btn);
-											echo form_close();
-									
-											echo "<a href='#' class='btn btn-default'>Mas Datos</a>";
-									?>
-									
-									<?php
-										} else if ($session_data = $this->session->userdata('logged_in')){
-											// Envia los datos en forma de formulario para agregar al carrito
-											echo form_open('carrito_agrega');
-											echo form_hidden('id_producto', $row->id_producto);
-											echo form_hidden('descripcion', $row->descripcion);
-											echo form_hidden('precio_venta', $row->precio_venta);
-											echo form_hidden('stock', $row->stock);
-									?>
-									<div>
-									<?php
-											$btn = array(
-												'class' => 'btn btn-primary',
-												'value' => 'Comprar',
-												'name' => 'action'
-												);
-											
-											echo form_submit($btn);
-											echo form_close();
-											echo "<a href='#' class='btn btn-default'>Más Datos</a>";
-									?>
-									</div>
-									<?php
-										
-									} else {
-											$btn = array(
-												'class' => 'btn btn-primary',
-												'value' => 'Comprar',
-												'data-target' => '#modalLogin',
-												'data-toggle' => 'modal',
-												'name' => 'action'
-												);
-											
-											echo form_submit($btn);
-											echo form_close();
-									
-											echo "<a href='#' class='btn btn-default'>Mas Datos</a>";
-										}
-									?>
+
+										<a href="<?php echo base_url("verDetalle/$row->id_producto"); ?>" class='btn btn-primary'>Ver más</a>
 									
 									</p>
 	
