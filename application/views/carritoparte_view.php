@@ -80,6 +80,8 @@
                         </b>
                     </td> 
                     <td colspan="5" align="right">
+                        <!-- Seguir comprando, envia a la página principal -->
+                        <input type="button" class ='btn btn-primary btn-lg' value="Seguir comprando" onclick="window.location = 'principal'">
                         <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en partes/head_view -->
                         <input type="button" href="<?php echo base_url('assets/js/principal.js');?>" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
                         <!-- Submit boton. Actualiza los datos en el carrito -->

@@ -88,7 +88,7 @@
 								<img src="<?php echo base_url($row->imagen); ?>" alt="" class="img-responsive img-thumbnail">
 
 								<div class="caption">
-									<h4><?php echo trim($row->descripcion); ?></h4>
+									<h4><b>$ <?php echo trim($row->precio_venta); ?></b></h4>
 
 									<p>
 										<?php 
@@ -102,7 +102,7 @@
 										?>
 									</p>
 
-									<p>Precio: $ <?php echo $row->precio_venta; ?> </p>
+									<p><?php echo $row->descripcion; ?> </p>
 
 									<p>
 									<?php

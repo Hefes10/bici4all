@@ -15,7 +15,7 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Productos</span>
             <span class="pull-right-container">
@@ -23,7 +23,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url('productos_todos');?>"><i class="fa fa-circle-o"></i> Mostrar productos</a></li>
+            <li><a href="<?php echo base_url('productos_todos');?>"><i class="fa fa-circle-o"></i> Mostrar productos</a></li>
             <li><a href="<?php echo base_url('agregar_producto');?>"><i class="fa fa-circle-o"></i> Agregar producto</a></li>
           </ul>
         </li>
