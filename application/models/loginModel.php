@@ -21,4 +21,18 @@ class LoginModel extends CI_Model{
             return false;
         }
 	}
+    
+    function validarUsuarioBaja($usuario)
+	{
+		$query = $this->db->get_where('usuarios', array('usuario'=>$usuario,'baja' => 'SI'), 1);
+
+        if($query->num_rows() == 1)
+        {
+            return $query->result();
+        }
+        else
+        {
+            return false;
+        }
+	}
 }

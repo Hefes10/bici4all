@@ -11,11 +11,12 @@ class LoginController extends CI_Controller{
 
 	function index()
 	{   //Reglas de validación
-		$this->form_validation->set_rules('usuario', 'Usuario', 'trim|required');
+		$this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback__valid_user');
 		$this->form_validation->set_rules('password', 'Contraseña','trim|required|callback__valid_login');
 		
 		//Mensajes en caso de error
 		$this->form_validation->set_message('required', 'el campo %s es requerido');
+		$this->form_validation->set_message('_valid_user', '<div class="alert alert-danger">La cuenta ha sido desactivada.</div>');
 		$this->form_validation->set_message('_valid_login', 'El usuario o contraseña son incorrectos');
 		$this->form_validation->set_message('is_unique', 'El campo %s ya existe');
 		
@@ -42,40 +43,59 @@ class LoginController extends CI_Controller{
 		}
 	}
 
+	function _valid_user($usuario)
+	{ 
+		$baja = $this->loginModel->validarUsuarioBaja($usuario);
 
+		if($baja){
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+	
 	function _valid_login($password)
 	{ 
 		//Se validaron los campos exitosamente. Se valida con la base de datos
 		$usuario = $this->input->post('usuario');
 
-        //Consulta a la base
-		$result = $this->loginModel->validarUsuario($usuario, $password);
+		$baja = $this->loginModel->validarUsuarioBaja($usuario);
 
-		if($result)
-		{	//Si el resultado es correcto lo asigna a la variable session
-			$sess_array = array();
-			foreach($result as $row)
-			{
-				$sess_array = array('id_usuario' => $row->id_usuario,
-									'nombre' => $row->nombre,
-									'apellido' => $row->apellido,
-									'email' => $row->email,
-                                    'id_perfil' => $row->id_perfil,
-                                    'usuario' => $row->usuario,
-                                    'password' => $row->password);
-									
-				$this->session->set_userdata('logged_in', $sess_array);
+		if($baja){
+			return true;
+		} else {
+			//Consulta a la base
+			$result = $this->loginModel->validarUsuario($usuario, $password);
+	
+			if($result)
+			{	//Si el resultado es correcto lo asigna a la variable session
+				$sess_array = array();
+				foreach($result as $row)
+				{
+					$sess_array = array('id_usuario' => $row->id_usuario,
+										'nombre' => $row->nombre,
+										'apellido' => $row->apellido,
+										'email' => $row->email,
+										'id_perfil' => $row->id_perfil,
+										'usuario' => $row->usuario,
+										'password' => $row->password);
+										
+					$this->session->set_userdata('logged_in', $sess_array);
+				}
+				return TRUE;
 			}
-			return TRUE;
+			else 	//Sino devuelve que los datos no coinciden
+			{	
+				$this->form_validation->set_message('check_database', '<div class="alert alert-danger">Usuario o Contraseña invalido</div>');
+				return false;
+			}
+
 		}
-		else 	//Sino devuelve que los datos no coinciden
-		{	
-			$this->form_validation->set_message('check_database', '<div class="alert alert-danger">Usuario o Contraseña invalido</div>');
-			return false;
-		}
+		
 	}
-    
-    
+
+
     //Este metodo llama a la pagina Login
 	public function login()
 	{
@@ -101,3 +121,4 @@ class LoginController extends CI_Controller{
 		}	
 
 }
+?>
