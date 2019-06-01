@@ -29,7 +29,7 @@
                                 </div>
                                 <p>
                                 <div class="col">
-                                    Paga en hasta 12 cuotas!
+                                    <i class="fa fa-credit-card"> Paga en hasta 12 cuotas!</i>
                                 </div>
                                 <div class="col">
                                     <img class="m-1" src="<?php echo base_url('assets/img/mediosdepago.png'); ?>" alt="tarjetas 1" style="max-width: 50%;">
@@ -40,6 +40,7 @@
                                 </p>
                                 <div class="col">
                                     <p>
+                                        <i class="fa fa-bicycle">
                                         <?php 
                                             if ($row->stock < $row->stock_min && $row->stock > 0) {
                                                 echo 'Por debajo del valor minimo: '.$row->stock_min;
@@ -49,6 +50,7 @@
                                                 echo $row->stock. ' disponibles';
                                             }
                                         ?>
+                                        </i>
                                     </p>
                                 </div>
                                 <div class="col">

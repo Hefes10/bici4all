@@ -26,6 +26,30 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
+								<?php echo form_label('Marca:', 'marca'); ?>
+								<?php echo form_input(['name' => 'marca', 
+																'id' => 'marca', 
+																'class' => 'form-control',
+																'placeholder' => 'Marca', 
+																'autofocus'=>'autofocus',
+																'value'=>"$marca"]); ?>
+								<?php echo form_error('marca'); ?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<?php echo form_label('Modelo:', 'modelo'); ?>
+								<?php echo form_input(['name' => 'modelo', 
+																'id' => 'modelo', 
+																'class' => 'form-control',
+																'placeholder' => 'Modelo', 
+																'autofocus'=>'autofocus',
+																'value'=>"$modelo"]); ?>
+								<?php echo form_error('modelo'); ?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
 								<?php echo form_label('Descripcion:', 'descripcion'); ?>
 								<?php echo form_input(['name' => 'descripcion', 
 																'id' => 'descripcion', 

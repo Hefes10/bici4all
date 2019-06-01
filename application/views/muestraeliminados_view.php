@@ -33,6 +33,8 @@
 				<thead>
 					<tr>
 						<th>ID</th>
+						<th>Marca</th>
+						<th>Modelo</th>
 						<th>Descripcion</th>
 						<th>Categoria</th>
 						<th>Precio Venta</th>
@@ -45,6 +47,8 @@
 					<?php foreach($productos->result() as $row){ ?>
 					<tr>
 						<td><?php echo $row->id_producto;  ?></td>
+						<td><?php echo $row->marca;  ?></td>
+						<td><?php echo $row->modelo;  ?></td>
 						<td><?php echo $row->descripcion;  ?></td>
 						<td><?php echo $row->id_categoria;  ?></td>
 						<td><?php echo $row->precio_venta;  ?></td>

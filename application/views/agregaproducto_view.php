@@ -35,6 +35,28 @@
 											['class' => 'form-group', 'role' => 'form', 'id' => 'form_registro']); ?>
 						<fieldset>
 							<div class="form-group">
+								<label class="col-lg-2 control-label">Marca</label>
+								<div class="col-lg-10">
+									<?php echo form_input(['name' => 'marca', 
+															'id' => 'marca', 
+															'class' => 'form-control',
+															'placeholder' => 'Marca', 
+															'autofocus'=>'autofocus',
+															'value'=>set_value('marca')]); ?>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-2 control-label">Modelo</label>
+								<div class="col-lg-10">
+									<?php echo form_input(['name' => 'modelo', 
+															'id' => 'modelo', 
+															'class' => 'form-control',
+															'placeholder' => 'Modelo', 
+															'autofocus'=>'autofocus',
+															'value'=>set_value('modelo')]); ?>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-lg-2 control-label">Descripción</label>
 								<div class="col-lg-10">
 									<?php echo form_input(['name' => 'descripcion', 

@@ -40,50 +40,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}else{
 			redirect('login', 'refresh'); }
 		}
-
-		/**
-	    * Muestra todos los electrodomesticos en tabla
-	    */
-		function muestra_electrodomesticos()
-		{
-			if($this->_veri_log()){
-			$data = array('titulo' => 'Electrodomesticos');
-		
-			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['perfil_id'];
-			$data['nombre'] = $session_data['nombre'];
-
-			$dat = array('productos' => $this->producto_model->get_electrodomesticos() );
-
-			$this->load->view('partes/head_view', $data);
-			$this->load->view('partes/menu_view2', $data);
-			$this->load->view('back/productos/muestraelectrodomesticos_view', $dat);
-			$this->load->view('partes/footer_view');
-			}else{
-			redirect('login', 'refresh'); }
-		}
-
-		/**
-	    * Muestra todos los muebles en tabla
-	    */
-		function muestra_muebles()
-		{
-			if($this->_veri_log()){
-			$data = array('titulo' => 'Muebles');
-		
-			$session_data = $this->session->userdata('logged_in');
-			$data['perfil_id'] = $session_data['perfil_id'];
-			$data['nombre'] = $session_data['nombre'];
-
-			$dat = array('productos' => $this->producto_model->get_muebles() );
-
-			$this->load->view('partes/head_view', $data);
-			$this->load->view('partes/menu_view2');
-			$this->load->view('back/productos/muestramuebles_view', $dat);
-			$this->load->view('partes/footer_view');
-			}else{
-			redirect('login', 'refresh'); }
-		}
 		
 		/**
 	    * Muestra formulario para agregar producto
@@ -111,8 +67,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		function agrega_producto()
 		{
 			//Genero las reglas de validacion
-			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required|is_unique[productos.descripcion]');
-			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
+			$this->form_validation->set_rules('marca', 'Marca', 'required');
+			$this->form_validation->set_rules('modelo', 'Modelo', 'required');
+			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
+			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required|numeric');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
@@ -123,11 +81,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_message('required',
 										'<div class="alert alert-danger">El campo %s es obligatorio</div>');
 
-			$this->form_validation->set_message('is_unique',
-										'<div class="alert alert-danger">El campo %s ya existe</div>');
+			$this->form_validation->set_message('is_unique', '<div class="alert alert-danger">El campo %s ya existe</div>');
 
-			$this->form_validation->set_message('numeric',
-							'<div class="alert alert-danger">El campo %s debe contener un valor numérico</div>');
+			$this->form_validation->set_message('numeric', '<div class="alert alert-danger">El campo %s debe contener un valor numérico</div>');
 
 
 			if (!$this->form_validation->run())
@@ -195,6 +151,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
                     // Array de datos para insertar en productos
                     $data = array(
+						'marca'=>$this->input->post('marca',true),
+						'modelo'=>$this->input->post('modelo',true),
 						'descripcion'=>$this->input->post('descripcion',true),
 						'id_categoria'=>$this->input->post('id_categoria',true),
 						'precio_costo'=>$this->input->post('precio_costo',true),
@@ -239,6 +197,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			if ($datos_producto != FALSE) {
 				foreach ($datos_producto->result() as $row) 
 				{
+					$marca = $row->marca;
+					$modelo = $row->modelo;
 					$descripcion = $row->descripcion;
 					$id_categoria = $row->id_categoria;
 					$imagen = $row->imagen;
@@ -250,6 +210,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 				$dat = array('producto' =>$datos_producto,
 					'id_producto'=>$id,
+					'marca'=>$marca,
+					'modelo'=>$modelo,
 					'descripcion'=>$descripcion,
 					'id_categoria'=>$id_categoria,
 					'precio_costo'=>$precio_costo,
@@ -283,6 +245,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		function modificar_producto()
 		{
 			//Validación del formulario
+			$this->form_validation->set_rules('marca', 'Marca', 'required');
+			$this->form_validation->set_rules('modelo', 'Modelo', 'required');
 			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
 			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
@@ -306,6 +270,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$dat = array(
 				'id_producto'=>$id_producto,
+				'marca'=>$this->input->post('marca',true),
+				'modelo'=>$this->input->post('modelo',true),
 				'descripcion'=>$this->input->post('descripcion',true),
 				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
@@ -353,6 +319,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	        // Array de datos para obtener datos de libros sin la imagen 
 	    	$dat = array(
 				'id_producto'=>$id_producto,
+				'marca'=>$this->input->post('marca',true),
+				'modelo'=>$this->input->post('modelo',true),
 				'descripcion'=>$this->input->post('descripcion',true),
 				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
@@ -497,11 +465,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 		}
 	}
-	    
-
-		
-		
-		
+	    	
 
 /* End of file
 */
