@@ -23,10 +23,12 @@ CREATE TABLE IF NOT EXISTS perfiles(
 
 CREATE TABLE IF NOT EXISTS productos(
 	id_producto INTEGER (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-	descripcion VARCHAR (50) NOT NULL,
+	marca VARCHAR (50) NOT NULL,
+	modelo VARCHAR (50) NOT NULL,
+	descripcion VARCHAR (200) NOT NULL,
 	id_categoria INTEGER (10) NOT NULL,
-	precio_costo DOUBLE (6,2) NOT NULL,
-	precio_venta DOUBLE (6,2) NOT NULL,
+	precio_costo DOUBLE (10,2) NOT NULL,
+	precio_venta DOUBLE (10,2) NOT NULL,
 	stock INTEGER (10) NOT NULL DEFAULT 0,
 	stock_min INTEGER (10) NOT NULL DEFAULT 0,
 	imagen VARCHAR (500),

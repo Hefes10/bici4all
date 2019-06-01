@@ -43,7 +43,7 @@ class Carrito_controller extends CI_Controller {
         // Genera array para insertar en el carrito
 		$insert_data = array(
 			'id' => $this->input->post('id_producto'),
-			'name' => $this->input->post('descripcion'),
+			'name' => $this->input->post('modelo'),
 			'price' => $this->input->post('precio_venta'),
 			'qty' => 1
 			);	
@@ -52,7 +52,8 @@ class Carrito_controller extends CI_Controller {
 		$this->cart->insert($insert_data);
 	      
         // Redirige a la misma página que se encuentra
-		header('Location: '.$_SERVER['HTTP_REFERER']);
+		//header('Location: '.$_SERVER['HTTP_REFERER']);
+		header('Location: '. base_url('mi_carrito'));
 	}
 
 	

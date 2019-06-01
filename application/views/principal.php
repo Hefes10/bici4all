@@ -91,22 +91,8 @@
 									<h4><b>$ <?php echo trim($row->precio_venta); ?></b></h4>
 
 									<p>
-										<?php 
-											if ($row->stock < $row->stock_min && $row->stock > 0) {
-												echo 'Por debajo del valor minimo: '.$row->stock_min;
-											} elseif ($row->stock == 0) {
-												echo 'No hay stock';
-											}else {
-												echo 'Stock: '.$row->stock;
-											}
-										?>
-									</p>
 
-									<p><?php echo $row->descripcion; ?> </p>
-
-									<p>
-
-										<a href="<?php echo base_url("verDetalle/$row->id_producto"); ?>" class='btn btn-primary'>Ver más</a>
+										<a href="<?php echo base_url("verDetalle/$row->id_producto"); ?>" class='btn btn-info'>Ver más</a>
 									
 									</p>
 	
