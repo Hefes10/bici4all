@@ -22,7 +22,6 @@
             if ($cart = $this->cart->contents()):  
             ?>
                 <tr id= "main_heading">
-                    <td>ID</td>
                     <td>Descripcion</td>
                     <td>Precio</td>
                     <td>Cantidad</td>
@@ -36,16 +35,11 @@
                 $i = 1;
 
                 foreach ($cart as $item):
-                    echo form_hidden('cart[' . $item['id'] . '][id]', $item['id']);
-                    echo form_hidden('cart[' . $item['id'] . '][rowid]', $item['rowid']);
                     echo form_hidden('cart[' . $item['id'] . '][name]', $item['name']);
                     echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
                     echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
             ?>
                     <tr>
-                        <td>
-                            <?php echo $i++; ?>
-                        </td>
                         <td>
                             <?php echo $item['name']; ?>
                         </td>
@@ -53,8 +47,8 @@
                             $ <?php echo number_format($item['price'], 2); ?>
                         </td>
                         <td>
-                            <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 
-                                                    'maxlength="3" size="1" style="text-align: right"'); ?>
+                        <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 
+                                                    'maxlength="2" size="1" class="mb-1" style="text-align: right"'); ?><input type="submit" class ='btn btn-outline-primary btn-sm' value="Actualizar"></a>
                         </td>
                             <?php $gran_total = $gran_total + $item['subtotal']; ?>
                         <td>
@@ -81,13 +75,11 @@
                     </td> 
                     <td colspan="5" align="right">
                         <!-- Seguir comprando, envia a la página principal -->
-                        <input type="button" class ='btn btn-primary btn-lg' value="Seguir comprando" onclick="window.location = 'principal'">
+                        <input type="button" class ='btn btn-primary btn-lg mt-1' value="Seguir comprando" onclick="window.location = 'principal'">
                         <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en partes/head_view -->
-                        <input type="button" href="<?php echo base_url('assets/js/principal.js');?>" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
-                        <!-- Submit boton. Actualiza los datos en el carrito -->
-                        <input type="submit" class ='btn btn-primary btn-lg' value="Actualizar">
+                        <input type="button" href="<?php echo base_url('assets/js/principal.js');?>" class ='btn btn-danger btn-lg mt-1' value="Borrar Carrito" onclick="borra_carrito()">
                         <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
-                        <input type="button" class ='btn btn-primary btn-lg' value="Confirmar Orden" onclick="window.location = 'comprar'">
+                        <input type="button" class ='btn btn-success btn-lg mt-1' value="Confirmar Orden" onclick="window.location = 'comprar'">
                     </td>
                 </tr>
                 <?php echo form_close();

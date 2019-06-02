@@ -38,7 +38,8 @@ class LoginController extends CI_Controller{
 			
 		}
 		else{
-			redirect(base_url('principal'));
+			//redirect(base_url('principal'));
+			header('Location: '.$_SERVER['HTTP_REFERER']);
 
 		}
 	}
