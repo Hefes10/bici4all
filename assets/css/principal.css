@@ -15,15 +15,15 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-#navBar form button.btn-dark {
+/* #navBar form button.btn-dark {
 	background-color: #0e4714;
 	border-color: white;
-}
+} */
 
-#navBar form button.btn-dark:hover {
+/* #navBar form button.btn-dark:hover {
 	background-color: #6e932c;
 	color: white;
-}
+} */
 
 #dropdown-menu {
 	background: rgba(0,61,155,.85);
@@ -266,3 +266,46 @@ body {
     color: #36A0FF;
 }
 /* /Contacto */
+
+/* barra de busqueda */
+.search-box{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #262626;
+	height: 40px;
+	border-radius: 40px;
+}
+.search-box:hover > .search-txt{
+	width: 240px;
+	padding: 0 6px;
+}
+.search-btn{
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #262626;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+.search-box:hover > .search-btn{
+	background: rgba(0,61,155,.85);
+	color: #262626;
+}
+.search-txt{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+/* barra de busqueda */

@@ -40,6 +40,14 @@
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>
+        <li>
+          <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
+            <a href="#" class="search-btn">
+              <i class="fa fa-search"></i>
+            </a>
+          </div>            
+        </li>
       </ul>
                           
      <!--            MENU PARA CLIENTES-->
@@ -70,12 +78,15 @@
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>
+        <li>
+          <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
+            <a href="#" class="search-btn">
+              <i class="fa fa-search"></i>
+            </a>
+          </div>            
+        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-        <button class="btn btn-dark my-2 my-sm-0" type="submit">
-          <i class="fa fa-search"> Buscar</i>
-        </button>
       </form>
             
      <!--            MENU PARA PUBLICO EN GENERAL-->
@@ -89,8 +100,6 @@
             <a class="dropdown-item" href="<?php echo base_url("principal/1");?>">Bicicletas</a>
             <a class="dropdown-item" href="<?php echo base_url('principal/2');?>">Scooter</a>
             <a class="dropdown-item" href="<?php echo base_url('principal');?>">Ver todos</a>
-            <!-- <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a> -->
           </div> 
         </li>
         <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
@@ -102,14 +111,20 @@
           <a class="nav-link" href="#">
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
+<<<<<<< HEAD
         </li> -->
+=======
+        </li>
+        <li>
+          <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
+            <a href="#" class="search-btn">
+              <i class="fa fa-search"></i>
+            </a>
+          </div>            
+        </li>
+>>>>>>> buscador
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-        <button class="btn btn-dark my-2 my-sm-0" type="submit">
-          <i class="fa fa-search"> Buscar</i>
-        </button>
-      </form>               
     <?php }?> 
 
       </div>
