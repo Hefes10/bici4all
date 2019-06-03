@@ -51,7 +51,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Ventas</a></li>
+            <li><a href="<?php echo base_url(); ?>reporteVentasController"><i class="fa fa-circle-o"></i> Ventas</a></li>
           </ul>
         </li>
         <li class="treeview">

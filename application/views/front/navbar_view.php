@@ -107,13 +107,10 @@
             <i class="fa fa-user"></i> Login
           </a>
         </li>
-        <!-- <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
+        <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
           <a class="nav-link" href="#">
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
-<<<<<<< HEAD
-        </li> -->
-=======
         </li>
         <li>
           <div class="search-box">
@@ -123,7 +120,6 @@
             </a>
           </div>            
         </li>
->>>>>>> buscador
       </ul>
     <?php }?> 
 
