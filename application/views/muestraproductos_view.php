@@ -34,13 +34,13 @@
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_producto'); ?>">Agregar</a>
 				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_eliminados'); ?>">ELIMINADOS</a>
 				<br> <br>
-				<table class="table table-bordered">
-					<thead>
+				<table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
+                    <thead>
 						<tr>
 							<th>ID</th>
 							<th>Marca</th>
 							<th>Modelo</th>
-							<th>Descripcion</th>
+
 							<th>Clase</th>
 							<th>Precio Venta</th>
 							<th>Stock</th>
@@ -55,7 +55,7 @@
 							<td><?php echo $row->id_producto;  ?></td>
 							<td><?php echo $row->marca;  ?></td>
 							<td><?php echo $row->modelo;  ?></td>
-							<td><?php echo $row->descripcion;  ?></td>
+
 							<td><?php echo $row->id_categoria;  ?></td>
 							<td><?php echo $row->precio_venta;  ?></td>
 							<td><?php echo $row->stock;  ?></td>
@@ -67,11 +67,11 @@
 						</tr>
 						<?php } ?>
 					</tbody>
-				</table>	            
+                    </table>            
 			</div>
 
 		<?php } ?>
 
     </section>
     <!-- /.content -->
-  </div>
+	</div>
