@@ -15,9 +15,9 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?php echo base_url('assets/skins/_all-skins.min.css');?>">
   <!-- DataTables -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/dataTables.bootstrap.min.css');?>">
     <!-- DataTables Export-->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/buttons.dataTables.min.css');?>">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
