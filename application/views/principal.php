@@ -77,8 +77,6 @@
 
 			<div class="container-fluid">
 
-				<h2 class="text-center">Productos</h2>
-
 				<hr>
 
 				<div class="row text-center">
