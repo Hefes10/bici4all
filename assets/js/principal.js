@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+  jQuery(document).ready(function(){
     $(".oculto").hide();              
       $(".inf").click(function(){
             var nodo = $(this).attr("href");  
@@ -13,11 +13,12 @@ jQuery(document).ready(function(){
             }
       });
   });
-  
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
 
+  //borrar carrito
   function borra_carrito() {
     var result = confirm('Esta seguro de eliminar todo el carrito?');
 
@@ -26,13 +27,14 @@ jQuery(document).ready(function(){
     } else {
         return false; // Boton Cancela
     }
-};
+  };
 
-$(document).ready(function() {
-  $('#example').DataTable( {
-    dom: 'Bfrtip',
-    buttons: [
+  //botones del datatable
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
         'copy', 'csv', 'excel', 'pdf', 'print'
-    ]
+      ]
+    } );
   } );
-} );

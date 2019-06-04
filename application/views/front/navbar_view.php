@@ -112,7 +112,7 @@
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
         </li>
-        <li>
+        <li class="nav-item dropdown">
           <div class="search-box">
             <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
             <a href="#" class="search-btn">
