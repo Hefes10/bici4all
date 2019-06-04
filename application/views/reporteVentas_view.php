@@ -33,7 +33,7 @@
                                 <?php foreach($ventas->result() as $venta): ?>
                                     <tr>
                                         <td><?php echo $venta->id_venta;?></td>
-                                        <td><?php echo $venta->id_usuario;?></td>
+                                        <td><?php echo $venta->nombre;?></td>
                                         <td><?php echo $venta->fecha;?></td>
                                         <td><?php echo $venta->total_venta;?></td>
                                         <td>
