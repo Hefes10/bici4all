@@ -29,7 +29,7 @@
 				<h1>Todos los Usuarios Eliminados</h1>
 			</div>	
 
-			<table class="table table-bordered">
+			<table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
 				<thead>
 					<tr>
                         <th>ID</th>

@@ -33,7 +33,7 @@
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_usuario'); ?>">Agregar</a>
 				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_usuarios_eliminados'); ?>">ELIMINADOS</a>
 				<br> <br>
-				<table class="table table-bordered">
+				<table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
 					<thead>
 						<tr>
 							<th>ID</th>
