@@ -39,7 +39,6 @@
                         <th>Usuario</th>
                         <th>Password</th>
                         <th>Perfil</th>
-                        <th>Baja</th>
                         <th>Modificar</th>
 					</tr>
 				</thead>
@@ -53,7 +52,6 @@
                         <td><?php echo $row->usuario;  ?></td>
                         <td><?php echo $row->password;  ?></td>
                         <td><?php echo $row->id_perfil;  ?></td>
-                        <td><?php echo $row->baja;  ?></td>
 						<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_activa/$row->id_usuario");?>">Activar</a></td>
 					</tr>
 					<?php } ?>

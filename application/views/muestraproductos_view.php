@@ -44,7 +44,6 @@
 							<th>Clase</th>
 							<th>Precio Venta</th>
 							<th>Stock</th>
-							<th>Delete</th>
 							<th>Imagen</th>
 							<th>Modificar</th>
 						</tr>
@@ -55,11 +54,9 @@
 							<td><?php echo $row->id_producto;  ?></td>
 							<td><?php echo $row->marca;  ?></td>
 							<td><?php echo $row->modelo;  ?></td>
-
 							<td><?php echo $row->id_categoria;  ?></td>
 							<td><?php echo $row->precio_venta;  ?></td>
 							<td><?php echo $row->stock;  ?></td>
-							<td><?php echo $row->eliminado;  ?></td>
 							<td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="100" height="100" src="<?php  echo base_url($row->imagen); ?>" ></td>
 							<td><a href="<?php echo base_url("productos_modifica/$row->id_producto");?>">Modificar</a>
 							<br>
