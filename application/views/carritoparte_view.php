@@ -22,7 +22,7 @@
             if ($cart = $this->cart->contents()):  
             ?>
                 <tr id= "main_heading">
-                    <td>Descripcion</td>
+                    <td>Nombre</td>
                     <td>Precio</td>
                     <td>Cantidad</td>
                     <td>Total</td>
@@ -35,6 +35,8 @@
                 $i = 1;
 
                 foreach ($cart as $item):
+                    echo form_hidden('cart[' . $item['id'] . '][id]', $item['id']);
+                    echo form_hidden('cart[' . $item['id'] . '][rowid]', $item['rowid']);
                     echo form_hidden('cart[' . $item['id'] . '][name]', $item['name']);
                     echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
                     echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
@@ -47,8 +49,8 @@
                             $ <?php echo number_format($item['price'], 2); ?>
                         </td>
                         <td>
-                        <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 
-                                                    'maxlength="2" size="1" class="mb-1" style="text-align: right"'); ?><input type="submit" class ='btn btn-outline-primary btn-sm' value="Actualizar"></a>
+                            <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 
+                                                    'maxlength="3" size="1" class="mb-1" style="text-align: right"'); ?><input type="submit" class ='btn btn-outline-primary btn-sm' value="Actualizar">
                         </td>
                             <?php $gran_total = $gran_total + $item['subtotal']; ?>
                         <td>
