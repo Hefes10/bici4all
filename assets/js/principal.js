@@ -37,4 +37,4 @@
         'copy', 'csv', 'excel', 'pdf', 'print'
       ]
     } );
-  } );
+  } );     

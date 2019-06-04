@@ -54,7 +54,15 @@
 							<td><?php echo $row->id_producto;  ?></td>
 							<td><?php echo $row->marca;  ?></td>
 							<td><?php echo $row->modelo;  ?></td>
-							<td><?php echo $row->id_categoria;  ?></td>
+							<td>
+							<?php
+							if($row->id_categoria == 1){
+								echo 'Bicicleta';
+							} elseif($row->id_categoria == 2){
+								echo 'Scooter';
+							}
+							?>
+							</td>
 							<td><?php echo $row->precio_venta;  ?></td>
 							<td><?php echo $row->stock;  ?></td>
 							<td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="100" height="100" src="<?php  echo base_url($row->imagen); ?>" ></td>

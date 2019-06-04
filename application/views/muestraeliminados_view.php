@@ -49,7 +49,15 @@
 						<td><?php echo $row->marca;  ?></td>
 						<td><?php echo $row->modelo;  ?></td>
 						<td><?php echo $row->descripcion;  ?></td>
-						<td><?php echo $row->id_categoria;  ?></td>
+						<td>
+							<?php
+							if($row->id_categoria == 1){
+								echo 'Bicicleta';
+							} elseif($row->id_categoria == 2){
+								echo 'Scooter';
+							}
+							?>
+							</td>
 						<td><?php echo $row->precio_venta;  ?></td>
 						<td><?php echo $row->stock;  ?></td>
 						<td><a href="<?php echo base_url("productos_modifica/$row->id_producto");?>">Modificar</a>|<a href="<?php echo base_url("productos_activa/$row->id_producto");?>">Activar</a></td>

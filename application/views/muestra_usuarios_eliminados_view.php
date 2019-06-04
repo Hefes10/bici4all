@@ -51,7 +51,15 @@
                         <td><?php echo $row->email;  ?></td>
                         <td><?php echo $row->usuario;  ?></td>
                         <td><?php echo $row->password;  ?></td>
-                        <td><?php echo $row->id_perfil;  ?></td>
+                        <td>
+                        <?php
+                        if($row->id_perfil == 1){
+                          echo 'Admin';
+                        } elseif($row->id_perfil == 2){
+                          echo 'Cliente';
+                        }
+                        ?>
+                        </td>
 						<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_activa/$row->id_usuario");?>">Activar</a></td>
 					</tr>
 					<?php } ?>
