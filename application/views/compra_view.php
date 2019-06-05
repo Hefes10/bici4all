@@ -53,7 +53,22 @@
                 <?php echo form_hidden('total_venta', $gran_total); ?>
             </table>
             <br> 
-            <?php echo form_submit('confirmar', 'Confirmar',"class='btn btn-lg btn-primary'"); ?> 
+            <?php
+            $gran_total = $gran_total * 100 ?>
+            <form action="asd" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_U4B7dkOXXdWzc0bI66KAxhP500YNTDwSMQ" 
+                    data-amount="<?php echo($gran_total);?>"
+                    data-name="BC4ALL"
+                    data-image="<?php echo base_url('assets/img/favicon.ico');?>"
+                    data-currency="ars"
+                    data-locale="auto">
+                </script>
+                <script>
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                </script>
+                <?php echo form_submit('confirmar', 'Pagar',"class='btn btn-lg btn-primary'"); ?>
+            </form>
             <br> <br>
         </div>
         <?php echo form_close(); ?>
