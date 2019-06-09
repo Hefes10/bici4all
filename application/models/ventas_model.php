@@ -30,10 +30,11 @@ class Ventas_model extends CI_Model{
     
     function get_detalle()
 	{
-		$this->db->select('d.*,v.*,p.*');
+		$this->db->select('d.*,v.*,p.*,u.*');
         $this->db->from('ventas_detalle d');
         $this->db->join('ventas_cabecera v', 'd.id_venta = v.id_venta');
         $this->db->join('productos p', 'd.id_producto = p.id_producto');
+        $this->db->join('usuarios u', 'v.id_usuario = u.id_usuario');
 
         $query = $this->db->get();
 
