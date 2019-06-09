@@ -6,6 +6,7 @@
 		{
 			parent::__construct();
 			$this ->load->model('usuario_model');
+			$this ->load->model('loginModel');
 		}
 		
 		/**
@@ -61,10 +62,27 @@
 			else 	//Pasa la validacion
 			{
 				//Envio array al metodo insert para registro de datos
-				$usuario = $this->usuario_model->add_user($data);
-
-				//Redirecciono a la pagina de perfil
-				redirect('login');
+				$this->usuario_model->add_user($data);
+				$usuario = $this->input->post('usuario',true);
+				$result = $this->loginModel->validarUsuario($usuario, $pass);
+	
+				if($result)
+				{	//Si el resultado es correcto lo asigna a la variable session
+					$sess_array = array();
+					foreach($result as $row)
+					{
+						$sess_array = array('id_usuario' => $row->id_usuario,
+											'nombre' => $row->nombre,
+											'apellido' => $row->apellido,
+											'email' => $row->email,
+											'id_perfil' => $row->id_perfil,
+											'usuario' => $row->usuario,
+											'password' => $row->password);
+											
+						$this->session->set_userdata('logged_in', $sess_array);
+					}
+					redirect('principal');
+				}
 			}	
 		}
 
