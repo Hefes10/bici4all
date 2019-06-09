@@ -25,7 +25,7 @@
                                 <th>Nombre Cliente</th>
                                 <th>Fecha</th>
                                 <th>Total</th>
-                                <th>Opciones</th>
+                                <th>Detalles</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,8 +37,8 @@
                                         <td><?php echo $venta->fecha;?></td>
                                         <td><?php echo $venta->total_venta;?></td>
                                         <td>
-                                                <button type="button" class="btn btn-info btn-view-venta" value="<?php echo $venta->id_venta;?>" data-toggle="modal" data-target="#modalDetalle"><span class="fa fa-search"></span></button>
-                                            </td>
+                                        <a href="<?php echo base_url("verDetalleVenta/$venta->id_venta"); ?>" class='btn btn-info'>Ver más</a>
+                                        </td>
                                     </tr>
                                 <?php endforeach;?>
                             <?php endif ?>
@@ -50,26 +50,5 @@
         </div>
 
     </section>
-    <!-- /.content -->
-  </div>
-  <div class="modal fade" id="modal-default">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Informacion de la venta</h4>
-      </div>
-      <div class="modal-body">
-        asd
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary btn-print"><span class="fa fa-print"> </span>Imprimir</button>
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->
+    <!-- /.content -->

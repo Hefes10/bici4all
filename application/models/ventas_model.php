@@ -27,4 +27,20 @@ class Ventas_model extends CI_Model{
             return FALSE;
         }
     }
+    
+    function get_detalle()
+	{
+		$this->db->select('d.*,v.*,p.*');
+        $this->db->from('ventas_detalle d');
+        $this->db->join('ventas_cabecera v', 'd.id_venta = v.id_venta');
+        $this->db->join('productos p', 'd.id_producto = p.id_producto');
+
+        $query = $this->db->get();
+
+		if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
 }

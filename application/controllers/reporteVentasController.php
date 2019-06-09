@@ -31,8 +31,26 @@ class reporteVentasController extends CI_Controller {
             $this->load->view('admin/front/aside', $data);
 			$this->load->view('reporteVentas_view', $dat);
             $this->load->view('admin/front/footer');
-            $this->load->view('front/modal');
 		}else{
+        redirect('login', 'refresh'); }
+    }
+    
+    public function verDetalleVenta($id){
+        if($this->_veri_log()){
+            $data = array('titulo' => 'Detalle de Ventas');
+        
+            $session_data = $this->session->userdata('logged_in');
+            $data['id_perfil'] = $session_data['id_perfil'];
+            $data['nombre'] = $session_data['nombre'];
+
+            $dat = array('detalles' => $this->ventas_model->get_detalle());
+            $dat['id'] = $id;
+
+            $this->load->view('admin/front/header', $data);
+            $this->load->view('admin/front/aside', $data);
+            $this->load->view('detalleVenta_view', $dat);
+            $this->load->view('admin/front/footer');
+        }else{
         redirect('login', 'refresh'); }
     }
 }

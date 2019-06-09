@@ -74,8 +74,6 @@ $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1';
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';
-
-
 $route['verDetalle/(:num)'] = 'producto_controller/verDetalle/$1';
 //productos
 
@@ -108,6 +106,10 @@ $route['admin'] = 'Welcome/admin';
 $route['verificoUsuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
 // login
+
+//Admin
+$route['verDetalleVenta/(:num)'] = 'reporteVentasController/verDetalleVenta/$1';
+//admin
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
