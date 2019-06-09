@@ -31,7 +31,8 @@ class reporteVentasController extends CI_Controller {
             $this->load->view('admin/front/aside', $data);
 			$this->load->view('reporteVentas_view', $dat);
             $this->load->view('admin/front/footer');
-			}else{
+            $this->load->view('front/modal');
+		}else{
         redirect('login', 'refresh'); }
     }
 }

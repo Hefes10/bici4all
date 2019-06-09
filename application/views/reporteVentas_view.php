@@ -18,7 +18,7 @@
         <div class="box-body">
             <div class="row">
                 <div class="col-md-12">
-                    <table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
+                    <table id="example" class="table table-striped table-responsive-lg table-bordered table-hover display nowrap" style="width:100%">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -37,7 +37,7 @@
                                         <td><?php echo $venta->fecha;?></td>
                                         <td><?php echo $venta->total_venta;?></td>
                                         <td>
-                                                <button type="button" class="btn btn-info btn-view-venta" value="<?php echo $venta->id_venta;?>" data-toggle="modal" data-target="#modal-default"><span class="fa fa-search"></span></button>
+                                                <button type="button" class="btn btn-info btn-view-venta" value="<?php echo $venta->id_venta;?>" data-toggle="modal" data-target="#modalDetalle"><span class="fa fa-search"></span></button>
                                             </td>
                                     </tr>
                                 <?php endforeach;?>

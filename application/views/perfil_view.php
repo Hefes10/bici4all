@@ -2,7 +2,7 @@
 		<div class="container">
 			<div class="col-sm-10 col-md-10">
 				<div class="well">
-					<h1><?php echo $usuario; ?></h1>		
+					<h1>Perfil de: <?php echo $usuario; ?></h1>		
 				</div>	            
 
 				<?php echo form_open_multipart("modifica_perfil/$id_usuario"); ?>

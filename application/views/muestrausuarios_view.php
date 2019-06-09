@@ -32,43 +32,53 @@
 			<div class="container">
 				<a type="button" class="btn btn-success" href="<?php echo base_url('agregar_usuario'); ?>">Agregar</a>
 				<a type="button" class="btn btn-danger" href="<?php echo base_url('muestra_usuarios_eliminados'); ?>">ELIMINADOS</a>
-				<br> <br>
-				<table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Nombre</th>
-							<th>Apellido</th>
-							<th>Email</th>
-							<th>Usuario</th>
-							<th>Password</th>
-							<th>Perfil</th>
-							<th>Modificar</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach($usuarios->result() as $row){ ?>
-						<tr>
-							<td><?php echo $row->id_usuario;  ?></td>
-							<td><?php echo $row->nombre;  ?></td>
-							<td><?php echo $row->apellido;  ?></td>
-							<td><?php echo $row->email;  ?></td>
-							<td><?php echo $row->usuario;  ?></td>
-							<td><?php echo $row->password;  ?></td>
-							<td>
-							<?php
-							if($row->id_perfil == 1){
-								echo 'Admin';
-							} elseif($row->id_perfil == 2){
-								echo 'Cliente';
-							}
-							?>
-							</td>
-							<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_elimina/$row->id_usuario");?>">Eliminar</a></td>
-						</tr>
-						<?php } ?>
-					</tbody>
-				</table>	            
+			</div>
+
+			<br> <br>
+
+			<div class="box box-solid">
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-12">
+							<table id="example" class="table table-bordered table-hover display nowrap" style="width:100%">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Nombre</th>
+										<th>Apellido</th>
+										<th>Email</th>
+										<th>Usuario</th>
+										<th>Password</th>
+										<th>Perfil</th>
+										<th>Modificar</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach($usuarios->result() as $row){ ?>
+									<tr>
+										<td><?php echo $row->id_usuario;  ?></td>
+										<td><?php echo $row->nombre;  ?></td>
+										<td><?php echo $row->apellido;  ?></td>
+										<td><?php echo $row->email;  ?></td>
+										<td><?php echo $row->usuario;  ?></td>
+										<td><?php echo $row->password;  ?></td>
+										<td>
+										<?php
+										if($row->id_perfil == 1){
+											echo 'Admin';
+										} elseif($row->id_perfil == 2){
+											echo 'Cliente';
+										}
+										?>
+										</td>
+										<td><a href="<?php echo base_url("usuarios_modifica/$row->id_usuario");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_elimina/$row->id_usuario");?>">Eliminar</a></td>
+									</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+						</div>	            
+					</div>	            
+				</div>	            
 			</div>
 
 		<?php } ?>
