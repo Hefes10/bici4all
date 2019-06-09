@@ -1,5 +1,6 @@
 <!-- Header -->
 <?php $session_data = $this->session->userdata('logged_in'); ?>
+<?php $id_usuario = $session_data['id_usuario']; ?>
 
 <header id="header">
   <nav id="navBar" class="navbar navbar-expand-lg navbar-light navbar-static-top fixed-top" style="background: rgba(0,61,155,.85);">
@@ -33,7 +34,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
+          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['usuario'] ?></b>
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo base_url('admin');?>">Menú admin</a>
@@ -70,11 +71,11 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
+          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['usuario'] ?></b>
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo base_url('comprar');?>">Mis Compras</a>
-            <a class="dropdown-item" href="<?php echo base_url('misdatos');?>">Mis datos</a>
+            <a class="dropdown-item" href="<?php echo base_url("muestra_perfil/$id_usuario");?>">Mis datos</a>
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>

@@ -97,6 +97,9 @@ $route['agregar_usuario'] = 'usuario_controller/form_agrega_usuario';
 $route['verifico_nuevousuario'] = 'usuario_controller/agrega_usuario';
 $route['muestra_usuarios_eliminados'] = 'usuario_controller/muestra_usuarios_eliminados';
 $route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
+$route['muestra_perfil/(:num)'] = 'usuario_controller/muestra_perfil/$1';
+$route['modifica_perfil/(:num)'] = 'usuario_controller/muestra_modifica_perfil/$1';
+$route['verifico_modifica_perfil/(:num)'] = 'usuario_controller/modificar_perfil/$1';
 //usuarios
 
 // login
