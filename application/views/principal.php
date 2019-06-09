@@ -62,8 +62,10 @@
 		</div>
 	</div>
 	<!-- /carousel -->
-
+	
+	
 	<!-- Cards -->
+	
 	<section class="mt-4 bg">
 		<?php if (!$productos) { ?>
 
@@ -76,6 +78,19 @@
 			<?php } else { ?>
 
 			<div class="container-fluid">
+
+			<div class="container pt-3">
+				<div class="row">
+					<div class="col-12">
+						<div class="search-box">
+							<input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
+							<a href="#" class="search-btn">
+							<i class="fa fa-search"></i>
+							</a>
+						</div>       
+					</div>
+				</div>     
+			</div>
 
 				<hr>
 

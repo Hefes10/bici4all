@@ -41,14 +41,6 @@
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>
-        <li>
-          <div class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
-            <a href="#" class="search-btn">
-              <i class="fa fa-search"></i>
-            </a>
-          </div>            
-        </li>
       </ul>
                           
      <!--            MENU PARA CLIENTES-->
@@ -79,19 +71,11 @@
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
         </li>
-        <li>
-          <div class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
-            <a href="#" class="search-btn">
-              <i class="fa fa-search"></i>
-            </a>
-          </div>            
-        </li>
       </ul>
       </form>
             
      <!--            MENU PARA PUBLICO EN GENERAL-->
-      <?php } else {?> 
+     <?php } else {?> 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -112,14 +96,6 @@
           <a class="nav-link" href="#">
             <i class="fa fa-shopping-cart"></i> Mi Carrito
           </a>
-        </li>
-        <li class="nav-item dropdown">
-          <div class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
-            <a href="#" class="search-btn">
-              <i class="fa fa-search"></i>
-            </a>
-          </div>            
         </li>
       </ul>
     <?php }?> 
