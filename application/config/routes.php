@@ -113,6 +113,9 @@ $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
 //Admin
 $route['verDetalleVenta/(:num)'] = 'reporteVentasController/verDetalleVenta/$1';
 //admin
+$route['busqueda'] = 'producto_controller/busqueda';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+

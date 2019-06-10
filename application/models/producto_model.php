@@ -110,4 +110,26 @@ class Producto_model extends CI_Model{
             return FALSE;
         }        
     }
+
+    function busqueda($data){
+
+        $this->db->select('*');
+        $this->db->from('productos');
+        $this->db->like('marca', "$data");
+        $this->db->or_like('modelo', "$data");
+        $this->db->or_like('descripcion', "$data");
+        if($data == 'scooter'){
+            $this->db->or_like('id_categoria', 2);
+        } else($data == 'bicicleta'){
+            $this->db->or_like('id_categoria', 1)
+        };
+
+        $query = $this->db->get();
+
+        if($query->num_rows() > 0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
 } 

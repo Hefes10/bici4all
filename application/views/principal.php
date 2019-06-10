@@ -70,8 +70,27 @@
 		<?php if (!$productos) { ?>
 
 			<div class="container">
-				<div class="well">
-					<h1>No hay Productos disponibles</h1>
+
+				<div class="container pt-5">
+					<div class="row">
+						<div class="col-12">
+							<form action="<?php echo base_url('busqueda');?>" method="Post">
+								<div class="search-box">
+									<input class="search-txt" type="text submit" name="text" placeholder="¿Qué estás buscando?">
+									<a href="#" class="search-btn">
+									<i class="fa fa-search"></i>
+									</a>
+								</div>
+							</form>       
+						</div>
+					</div>     
+				</div>
+				<div class="row">
+					<div class="col">
+						<center>
+							<h1>No se encontraron productos.</h1>
+						</center>
+					</div>
 				</div>	
 			</div>
 
@@ -79,15 +98,17 @@
 
 			<div class="container-fluid">
 
-			<div class="container pt-3">
+			<div class="container pt-5">
 				<div class="row">
 					<div class="col-12">
-						<div class="search-box">
-							<input class="search-txt" type="text" name="" placeholder="¿Qué estás buscando?">
-							<a href="#" class="search-btn">
-							<i class="fa fa-search"></i>
-							</a>
-						</div>       
+						<form action="<?php echo base_url('busqueda');?>" method="Post">
+							<div class="search-box">
+								<input class="search-txt" type="text submit" name="text" placeholder="¿Qué estás buscando?">
+								<a href="#" class="search-btn">
+								<i class="fa fa-search"></i>
+								</a>
+							</div>
+						</form>       
 					</div>
 				</div>     
 			</div>

@@ -464,6 +464,21 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			}
 
 		}
+
+		public function busqueda()
+		{
+			$data = array('titulo' => 'Resultado de la busqueda');
+
+			$txt = $this->input->post('text',true);	
+		
+			$dat = array('productos' => $this->producto_model->busqueda($txt));
+			//Muestra la página de registro con el título de error
+
+			$this->load->view('front/head_view', $data);
+			$this->load->view('front/navbar_view');
+			$this->load->view('principal',$dat);
+			$this->load->view('front/footer_view');
+		}
 	}
 	    	
 
