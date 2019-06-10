@@ -7,6 +7,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
         {
             parent::__construct();
             $this ->load->model('usuario_model');
+            $this ->load->model('ventas_model');
         }
 
         private function _veri_log()
@@ -471,7 +472,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    		redirect("muestra_perfil/$id_usuario", 'refresh');
 			}
 			
-        }
+		}
 		
 		
     }

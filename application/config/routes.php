@@ -98,6 +98,9 @@ $route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
 $route['muestra_perfil/(:num)'] = 'usuario_controller/muestra_perfil/$1';
 $route['modifica_perfil/(:num)'] = 'usuario_controller/muestra_modifica_perfil/$1';
 $route['verifico_modifica_perfil/(:num)'] = 'usuario_controller/modificar_perfil/$1';
+
+$route['misCompras'] = 'reporteVentasController/misCompras';
+$route['misDetallesCompras/(:num)'] = 'reporteVentasController/misDetallesCompras/$1';
 //usuarios
 
 // login

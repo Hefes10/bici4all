@@ -66,7 +66,7 @@
           <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['usuario'] ?></b>
           </a>
           <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="<?php echo base_url('comprar');?>">Mis Compras</a>
+            <a class="dropdown-item" href="<?php echo base_url('misCompras');?>">Mis Compras</a>
             <a class="dropdown-item" href="<?php echo base_url("muestra_perfil/$id_usuario");?>">Mis datos</a>
             <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
           </div> 
