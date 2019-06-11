@@ -63,7 +63,7 @@ class reporteVentasController extends CI_Controller {
             $data['nombre'] = $session_data['nombre'];
 
             $dat = array('compras' => $this->ventas_model->get_Ventas());
-            $dat['id'] = $session_data['id_perfil'];
+            $dat['id'] = $session_data['id_usuario'];
 
             $this->load->view('front/head_view', $data);
             $this->load->view('front/navbar_view');

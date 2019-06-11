@@ -23,7 +23,7 @@
                                             <td><?php echo $compra->fecha;?></td>
                                             <td><?php echo $compra->total_venta;?></td>
                                             <td>
-                                            <a href="<?php echo base_url("misDetallesCompras/$compra->id_usuario"); ?>" class='btn btn-info'>Ver más</a>
+                                            <a href="<?php echo base_url("misDetallesCompras/$compra->id_venta"); ?>" class='btn btn-info'>Ver más</a>
                                             </td>
                                         </tr>
                                     <?php endif ?>
