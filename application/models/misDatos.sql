@@ -14,7 +14,8 @@ INSERT INTO usuarios VALUES
 (9,"Abbot","Benjamin","Nam@faucibus.org","sit","placerat,",2,"NO"),
 (10,"Preston","Wells","luctus@egetmollis.com","ligula","rutrum",2,"NO"),
 (11, 'dsa', 'dsa', 'dsa@dsa.com', 'dsa', 'dsa', 2, 'NO'),
-(12, 'asd', 'asd', 'asd@asd.com', 'asd', 'asd', 1, 'NO');
+(12, 'asd', 'asd', 'asd@asd.com', 'asd', 'asd', 1, 'NO'),
+(13, 'admin', 'admin', 'admin@bc4all.com', 'admin', 'admin', 1, 'NO');
 
 INSERT INTO categorias VALUES
 (1, 'bicicleta'),
