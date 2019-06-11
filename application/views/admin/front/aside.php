@@ -56,13 +56,13 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
+            <i class="fa fa-edit"></i> <span>Consultas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Consultas</a></li>
+            <li><a href="<?php echo base_url('consultasController'); ?>"><i class="fa fa-circle-o"></i> Consultas</a></li>
           </ul>
         </li>
       </ul>

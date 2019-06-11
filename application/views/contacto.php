@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-md-8 ml-auto mr-auto">
                                 <div class="well well-sm">
-                                    <form class="form-horizontal" method="post">
+                                    <form class="form-horizontal" action="<?php echo base_url('verifico_nuevaConsulta');?>" method="post">
                                         <fieldset>
                                             <legend class="text-center header">Contáctanos</legend>
                                             <div class="form-group">
@@ -40,7 +40,7 @@
                                                     <i class="fa fa-user bigicon"></i>
                                                 </span>
                                                 <div class="col">
-                                                    <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
+                                                    <input id="fname" name="nombre" type="text" placeholder="Nombre" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -57,7 +57,7 @@
                                                     <i class="fa fa-phone-square bigicon"></i>
                                                 </span>
                                                 <div class="col">
-                                                    <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
+                                                    <input id="phone" name="telefono" type="text" placeholder="Telefono" class="form-control">
                                                 </div>
                                             </div>
 
@@ -66,7 +66,7 @@
                                                     <i class="fa fa-pencil-square-o bigicon"></i>
                                                 </span>
                                                 <div class="col">
-                                                    <textarea class="form-control" id="message" name="message" placeholder="Ingrese su mensaje aquí. Nos pondremos en contacto con usted dentro de 2 días hábiles." rows="7"></textarea>
+                                                    <textarea class="form-control" id="message" name="consulta" placeholder="Ingrese su mensaje aquí. Nos pondremos en contacto con usted dentro de 2 días hábiles." rows="7"></textarea>
                                                 </div>
                                             </div>
 

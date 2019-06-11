@@ -60,6 +60,16 @@ CREATE TABLE IF NOT EXISTS categorias(
 	PRIMARY KEY (id_categoria)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS consultas(
+	id_consulta INTEGER (10) NOT NULL,
+	nombre VARCHAR (50) NOT NULL,
+	email VARCHAR (50) NOT NULL,
+	telefono VARCHAR (50),
+	consulta VARCHAR (500) NOT NULL,
+	eliminado VARCHAR (2) NOT NULL DEFAULT 'NO',
+	PRIMARY KEY (id_consulta)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
 ALTER TABLE usuarios
 ADD FOREIGN KEY (id_perfil) REFERENCES perfiles(id_perfil);
 

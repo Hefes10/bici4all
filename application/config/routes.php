@@ -98,10 +98,20 @@ $route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
 $route['muestra_perfil/(:num)'] = 'usuario_controller/muestra_perfil/$1';
 $route['modifica_perfil/(:num)'] = 'usuario_controller/muestra_modifica_perfil/$1';
 $route['verifico_modifica_perfil/(:num)'] = 'usuario_controller/modificar_perfil/$1';
+//usuarios
 
+//Reportes
 $route['misCompras'] = 'reporteVentasController/misCompras';
 $route['misDetallesCompras/(:num)'] = 'reporteVentasController/misDetallesCompras/$1';
-//usuarios
+$route['verDetalleVenta/(:num)'] = 'reporteVentasController/verDetalleVenta/$1';
+//reportes
+
+//Consultas
+$route['verConsultas'] = 'consultasController';
+$route['verConsultasEliminadas'] = 'consultasController/muestra_eliminados';
+$route['verifico_nuevaConsulta'] = 'consultasController/agrega_reclamo';
+$route['consulta_elimina/(:num)'] = 'consultasController/consulta/$1';
+//consultas
 
 // login
 $route['login'] = 'Welcome/login';
@@ -110,10 +120,9 @@ $route['verificoUsuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
 // login
 
-//Admin
-$route['verDetalleVenta/(:num)'] = 'reporteVentasController/verDetalleVenta/$1';
-//admin
+//Buscador
 $route['busqueda'] = 'producto_controller/busqueda';
+//buscador
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

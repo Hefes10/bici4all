@@ -118,11 +118,11 @@ class Producto_model extends CI_Model{
         $this->db->like('marca', "$data");
         $this->db->or_like('modelo', "$data");
         $this->db->or_like('descripcion', "$data");
-        if($data == 'scooter'){
+        if($data == 'bicicleta'){
+            $this->db->or_like('id_categoria', 1);
+        }elseif($data == 'scooter'){
             $this->db->or_like('id_categoria', 2);
-        } else($data == 'bicicleta'){
-            $this->db->or_like('id_categoria', 1)
-        };
+        }
 
         $query = $this->db->get();
 
