@@ -1,4 +1,3 @@
-
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Carrito_controller extends CI_Controller {
@@ -33,6 +32,22 @@ class Carrito_controller extends CI_Controller {
 			$this->load->view('carritoparte_view' );
 		}
 		$this->load->view('front/footer_view');
+	}
+	
+	public function productosInsuficientes()
+	{
+		$dat = array('productos' => $this->producto_model->get_productos());
+
+		$data = array('titulo' => 'Productos');
+		$session_data = $this->session->userdata('logged_in');
+		$data['id_perfil'] = $session_data['id_perfil'];
+		$data['nombre'] = $session_data['nombre'];
+		
+		$this->load->view('front/head_view', $data);
+		$this->load->view('front/navbar_view', $data);
+		$this->load->view('carritoparte_view' );
+		$this->load->view('front/footer_view');
+		$this->load->view('front/mensajes');
 	}
 
 
@@ -87,6 +102,7 @@ class Carrito_controller extends CI_Controller {
 
 		foreach( $cart_info as $id_producto => $cart)
 		{	
+		    $id = $cart['id'];
 		    $rowid = $cart['rowid'];
 	    	$price = $cart['price'];
 	    	$amount = $price * $cart['qty'];
@@ -99,11 +115,21 @@ class Carrito_controller extends CI_Controller {
 					'qty'     => $qty
 					);
 	         
-			$this->cart->update($data);
+			$productos = $this->producto_model->edit_producto($id);
+			//$dat = array('productos' => $this->producto_model->get_productos());
+			foreach($productos->result() as $row){
+				$stock = $row->stock;
+				if($stock < $qty){
+					header('Location: '. base_url('noStock'));
+					return;
+				} else {
+					$this->cart->update($data);
+					header('Location: '. base_url('mi_carrito'));
+				}
+			}
 		}
 
 		// Redirige a la misma página que se encuentra
-		header('Location: '.$_SERVER['HTTP_REFERER']);
 	}
 
 

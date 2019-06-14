@@ -84,6 +84,7 @@ $route['carrito_actualiza'] = 'carrito_controller/actualiza_carrito';
 $route['carrito_elimina/(:any)'] = 'carrito_controller/remove/$1';
 $route['comprar'] = 'carrito_controller/muestra_compra';
 $route['confirma_compra'] = 'carrito_controller/guarda_compra';
+$route['noStock'] = 'carrito_controller/productosInsuficientes';
 //carrito
 
 //usuarios
