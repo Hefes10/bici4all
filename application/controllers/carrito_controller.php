@@ -90,7 +90,8 @@ class Carrito_controller extends CI_Controller {
 		}
 		
         // Redirige a la misma página que se encuentra
-		header('Location: '.$_SERVER['HTTP_REFERER']);
+		//header('Location: '.$_SERVER['HTTP_REFERER']);
+		header('Location: '. base_url('mi_carrito'));
 	}
 	
 
@@ -122,8 +123,10 @@ class Carrito_controller extends CI_Controller {
 				if($stock < $qty){
 					header('Location: '. base_url('noStock'));
 					return;
-				} else {
+				} else if ($qty >= 0){
 					$this->cart->update($data);
+					header('Location: '. base_url('mi_carrito'));
+				} else {
 					header('Location: '. base_url('mi_carrito'));
 				}
 			}
